@@ -5,10 +5,15 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "Hello World!\n"; //stała łańcuchowa
     std::cout << "Bartosz Pasek\n";
+    std::cout << 'x'; //stała znakowa
+    std::cout << '\n';
+    std::cout << 82; //stała całkowitoliczbowa
+    std::cout << '\n';
+    std::cout << -2.5; //stała rzeczywista
 }
-
+     
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 

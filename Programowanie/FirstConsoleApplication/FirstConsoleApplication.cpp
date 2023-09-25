@@ -9,11 +9,11 @@ int main()
     std::cout << "Bartosz Pasek\n";
     std::cout << 'x'; //stała znakowa
     std::cout << '\n';
-    std::cout << 82; //stała całkowitoliczbowa
+    std::cout << 82; //stała całkowitoliczbowa-
     std::cout << '\n';
     std::cout << -2.5; //stała rzeczywista
-}
-     
+    std::cout << "Pirwsza dana " << 254 << "kolejny tekst\n";
+} 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 

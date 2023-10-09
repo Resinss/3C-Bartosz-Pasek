@@ -3,7 +3,7 @@
 /*
 *. Program obliczający pole prostokąta. 3
 *. Program obliczający objętość stożka. 4
-*. Program obliczający pole koła.
+*. Program obliczający pole koła.5
 *. Program obliczający wartość wyrażenia a^2 + b^2
 *. Program obliczający pole trójkąta o podstawie b i wysokości h
 *. Program obliczający objętość kuli o promieniu r
@@ -17,9 +17,9 @@
 
 void task1()
 {
-    int numberFromUser;
+	int numberFromUser;
 	std::cout << "Podaj liczbe\n";
-	std::cin  >> numberFromUser;
+	std::cin >> numberFromUser;
 
 	std::cout << "Podales " << numberFromUser << "\n";
 }
@@ -32,8 +32,8 @@ void task2()
 	int firstNumber, secondNumber;
 	std::cin >> firstNumber;
 	std::cout << "Podaj drugą liczbę\n";
-	std::cin >> secondNumber ;
-	
+	std::cin >> secondNumber;
+
 	int avarge;
 	avarge = (firstNumber + secondNumber) / 2;
 
@@ -45,52 +45,41 @@ void task2()
 
 void task3()
 {
-	int pierwszy_bok, drugi_bok;
+	int first_side, second_side;
 	std::cout << "Podaj pierwszy bok\n";
-	std::cin >> pierwszy_bok;
+	std::cin >> first_side;
 	std::cout << "Podaj drugi bok\n";
-	int secondNumber;
-	std::cin >> drugi_bok;
+
+	std::cin >> second_side;
 	int area;
-	area = pierwszy_bok * drugi_bok;
+	area = first_side * second_side;
 	std::cout << "Pole wynosi:";
-    std::cout << area;
+	std::cout << area;
 }
 
 void task4()
 {
-	int cone_base, cone_height;
-	std::cout << "Podaj podstawe stożka\n";
-	std::cin >> cone_base;
+	int cone_base_radius, cone_height;
+	std::cout << "Podaj promień podstawy stożka\n";
+	std::cin >> cone_base_radius;
 	std::cout << "Podaj wysokość stożka\n";
-		std::cin >> cone_base;
-		int area;
-		area = 1/3*cone_height*3.14*r*r;
-		std::cout << "Objętość wynosi:";
-		std::cout << area;
-
-
-
-
-
-
-
+	std::cin >> cone_height;
+	int volume;
+	volume = 1 / 3 * cone_height * 3.14 * cone_base_radius * cone_base_radius;
+	std::cout << "Objętość wynosi:";
+	std::cout << volume;
 }
 
-
-
-
-int main()
+void task5()
 {
-	setlocale(LC_CTYPE, "polish");
-	//task1();
-	//task2();
-	//task3();
-	task4();
+	int radius_circle;
+	std::cout << "Podaj wartość promienia koła\n";
+	std::cin >> radius_circle;
+	int area;
+	area = radius_circle * radius_circle * 3, 14;
+	std::cout << "Pole wynosi:";
+	std::cout << area;
 }
-
-
-
 /*
 Algorytm-zbiór instrukcji, który rozwiązuje zadany problem.
 Określa też kolejność wykonywanych instrukcji
@@ -111,26 +100,26 @@ typ_zmiennej nazwa_zmiennej;
 Typ zmiennej - wielkość obszsau pamięci, interpretacja ciągu bitów
 int- liczba całkowita ze zankiem <-2 147 483 648, 2 147 483 647>
 short - 2 bajtowa liczba całkowita ze znakiem <-32 768, 32 767>
-long - to comao co int 
+long - to comao co int
 long long - 8 bajtowa liczba ze znakiem <-9 223 372 836m 854 775 888, 9 223 272 836 854 775 887>
 
 unsigned - zmienna bez znajku <8, 2*max.
-float - bajtowa liczba rzeczywista, dokładność 6-7 cyfr po przecinku 
-dounle - 8 bajtowa liczba rzeczywista, dokładność 15-16 cyfr po przecinku 
-long double - 12 bajtowa liczba rzeczywista, dokładność 19-20 cyfr po przecinku 
-Nazwa zmiennej - nazwa obszaru pamięci, identyfikator  
+float - bajtowa liczba rzeczywista, dokładność 6-7 cyfr po przecinku
+dounle - 8 bajtowa liczba rzeczywista, dokładność 15-16 cyfr po przecinku
+long double - 12 bajtowa liczba rzeczywista, dokładność 19-20 cyfr po przecinku
+Nazwa zmiennej - nazwa obszaru pamięci, identyfikator
 Warunki niezbędne:
 * dozwoleone znaki:
    - alfabert angielski
    -cyfry arabskie 0-9
    -podkreślenie (podłoga)
 * pierwszym znkiem nie może byc cyfra
-* unikalny w swoim zalkresie widoczności 
-* nie może to być słowo kluczowe (zarezerwowne) danego języka 
+* unikalny w swoim zalkresie widoczności
+* nie może to być słowo kluczowe (zarezerwowne) danego języka
 
 Warunki programistów:
-* nazwa zmiennej powinna dawac charakter wykonywanych danych 
-* jeśli wiele słów w  miejscu sapcji wstawiamy podkreślenie albozaczynając od drugiego słowa piszemy je z dużej litry 
+* nazwa zmiennej powinna dawac charakter wykonywanych danych
+* jeśli wiele słów w  miejscu sapcji wstawiamy podkreślenie albozaczynając od drugiego słowa piszemy je z dużej litry
 * piszemy po angielsku
 *
 

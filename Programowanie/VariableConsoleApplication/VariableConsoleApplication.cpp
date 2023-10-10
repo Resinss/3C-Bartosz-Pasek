@@ -4,9 +4,9 @@
 *. Program obliczający pole prostokąta. 3
 *. Program obliczający objętość stożka. 4
 *. Program obliczający pole koła.5
-*. Program obliczający wartość wyrażenia a^2 + b^2
-*. Program obliczający pole trójkąta o podstawie b i wysokości h
-*. Program obliczający objętość kuli o promieniu r
+*. Program obliczający wartość wyrażenia a^2 + b^2 6
+*. Program obliczający pole trójkąta o podstawie b i wysokości h 7
+*. Program obliczający objętość kuli o promieniu r            8
 *. Program obliczający pole trapezu o podstawach a i b oraz wysokości h
 *. Program obliczający średnią ważoną trzech liczb z podanymi odpowiednimi wagami w1, w2 i w3.
 *. Stwórz program, który pobiera od użytkownika długość w metrach i przelicza ją na centymetry i milimetry, wyświetlając wynik.
@@ -24,7 +24,6 @@ void task1()
 	std::cout << "Podales " << numberFromUser << "\n";
 }
 
-
 //Program obliczający średnią artymatyczną dwóch liczb.
 void task2()
 {
@@ -39,9 +38,6 @@ void task2()
 
 	std::cout << "Średnia to: " << avarge << "\n";
 }
-
-
-
 
 void task3()
 {
@@ -72,16 +68,70 @@ void task4()
 
 void task5()
 {
-	int radius_circle;
+	int radius_circle, area;
 	std::cout << "Podaj wartość promienia koła\n";
 	std::cin >> radius_circle;
-	int area;
 	area = radius_circle * radius_circle * 3, 14;
 	std::cout << "Pole wynosi:";
 	std::cout << area;
 }
+
+void task6()
+{
+	int a, b, sum;
+	std::cout << "Podaj pierwszą liczbę\n";
+	std::cin >> a;
+	std::cout << "Podaj drugą liczbę\n";
+	std::cin >> b;
+	sum = a * a + b * b;
+	std::cout << "Suma wynosi:";
+	std::cout << sum;
+}
+
+void task7()
+{
+	int b, h, area;
+	std::cout << "Podaj długość podstawy\n";
+	std::cin >> b;
+	std::cout << "Podaj wysokość trójkąta\n";
+	std::cin >> h;
+	area = b * h / 2;
+	std::cout << "Pole wynosi:";
+	std::cout << area;
+}
+
+void task8()
+{
+	int r, volume;
+	std::cout << "Podaj długość promienia kuli\n";
+	std::cin >> r;
+	volume = r * r * r/ 4 / 3;
+    std::cout << "Objętość wynosi:";
+	std::cout << volume;
+
+
+
+
+
+}
+int main()
+{
+	setlocale(LC_CTYPE, "polish");
+	//task1();
+	//task2();
+	//task3();
+	//task4();
+	//task5();
+	//task6();
+	//task7();
+	task8();
+}
+
+
+
+
 /*
-Algorytm-zbiór instrukcji, który rozwiązuje zadany problem.
+*Algorytm-zbiór instrukcji, który rozwiązuje zadany problem.
 Określa też kolejność wykonywanych instrukcji
 Zapis algorytmu:
 *rysunek

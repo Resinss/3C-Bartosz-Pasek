@@ -154,6 +154,49 @@ void task6()
 		std::cout << "Jesteś niepełnoletni\n";
 }
 
+void task7()
+{
+	int NumberFromUser, absoluteNumber;
+	std::cout << "Podaj liczbę całkowitą\n";
+	std::cin >> NumberFromUser;
+
+	if (NumberFromUser > 0)
+		absoluteNumber = NumberFromUser;
+	else
+		absoluteNumber = NumberFromUser * -1;
+	std::cout << absoluteNumber;
+}
+
+void task8()
+{
+	int numberDay;
+	std::cout << "Podaj liczbę od 1 do 7\n";
+	std::cin >> numberDay;
+	if (numberDay == 1);
+	std::cout << "To jest poniedziałek\n";
+	std::cin >> numberDay;
+	if (numberDay == 2);
+	std::cout << "To jest wtorek\n";
+	std::cin >> numberDay;
+	if (numberDay == 3);
+	std::cout << "To jest środa\n";
+	std::cin >> numberDay;
+	if (numberDay == 4);
+	std::cout << "To jest czwartek\n";
+	std::cin >> numberDay;
+	if (numberDay == 5);
+	std::cout << "To jest piatek\n";
+	std::cin >> numberDay;
+	if (numberDay == 6);
+	std::cout << "To jest sobota\n";
+	std::cin >> numberDay;
+	if (numberDay == 7);
+	std::cout << "To jest niedziela\n";
+
+}
+
+
+
 
 int main()
 {
@@ -163,5 +206,7 @@ int main()
 	//task3();
 	//task4();
 	//task5();
-	task6();
+	//task6();
+	//task7();
+	task8();
 }

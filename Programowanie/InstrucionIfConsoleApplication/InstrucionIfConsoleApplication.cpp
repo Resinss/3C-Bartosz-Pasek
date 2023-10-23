@@ -17,7 +17,7 @@ Operatorzy logiczne:
 
 a   b    a&&b   a||b    !a
 F   F     F     F      T
-F   T     F     T      F 
+F   T     F     T      F
 T   F     F     T      F
 T   T     T     T      F
 
@@ -33,24 +33,24 @@ void task1()
 
 	if (number > 0)
 		std::cout << "Liczba jest dodatnia\n";
-	
+
 	if (number < 0)
 		std::cout << "Liczba jest ujemna\n";
 
 	if (number == 0)
 		std::cout << "Liczba jest rowna zero\n";
-	
+
 	std::cout << "Koloejna instrukcja\n";
 }
 
 //NAPISZ PROGRAM, KTÓRY WYŚWIETLI INFORMACJE CZY LICZBA JEST PARZYSTA CZY NIEPARZYSTA.
-void task2() 
+void task2()
 {
 	int number;
 	std::cout << "Podaj liczbe:\n";
 	std::cin >> number;
 
-	int rest = number % 2;  
+	int rest = number % 2;
 
 	if (rest == 0)
 		std::cout << "Liczba jest parzysta\n";
@@ -70,7 +70,7 @@ void task3()
 	int number;
 	std::cout << "Podaj liczbe:\n";
 	std::cin >> number;
-   //wersja 1
+	//wersja 1
 	if (number >= 1) //NUMBER > 0
 	{
 		if (number < 10) //NUMBER <=9
@@ -84,9 +84,9 @@ void task3()
 	//wersja 2
 	if (number >= 1)
 		if (number < 10)
-		std::cout << "Liczba jest w przedziale\n";
-	else 
-		std::cout << "Liczba z poza zakresu\n";
+			std::cout << "Liczba jest w przedziale\n";
+		else
+			std::cout << "Liczba z poza zakresu\n";
 	//wersja 4
 	if (number < 1 && number >= 10)
 		std::cout << "Liczba z poza zakresu\n";
@@ -144,10 +144,10 @@ void task5()
 
 void task6()
 {
-	int age, cout;
+	int age;
 	std::cout << "Podaj swój wiek:\n";
 	std::cin >> age;
-	
+
 	if (age >= 18)
 		std::cout << "jesteś osoba pełnoletnią\n";
 	else
@@ -172,27 +172,55 @@ void task8()
 	int numberDay;
 	std::cout << "Podaj liczbę od 1 do 7\n";
 	std::cin >> numberDay;
-	if (numberDay == 1);
-	std::cout << "To jest poniedziałek\n";
-	std::cin >> numberDay;
-	if (numberDay == 2);
-	std::cout << "To jest wtorek\n";
-	std::cin >> numberDay;
-	if (numberDay == 3);
-	std::cout << "To jest środa\n";
-	std::cin >> numberDay;
-	if (numberDay == 4);
-	std::cout << "To jest czwartek\n";
-	std::cin >> numberDay;
-	if (numberDay == 5);
-	std::cout << "To jest piatek\n";
-	std::cin >> numberDay;
-	if (numberDay == 6);
-	std::cout << "To jest sobota\n";
-	std::cin >> numberDay;
-	if (numberDay == 7);
-	std::cout << "To jest niedziela\n";
 
+	if (numberDay == 1)
+		std::cout << "To jest poniedziałek\n";
+
+	if (numberDay == 2)
+		std::cout << "To jest wtorek\n";
+
+	if (numberDay == 3)
+		std::cout << "To jest środa\n";
+
+	if (numberDay == 4)
+		std::cout << "To jest czwartek\n";
+
+	if (numberDay == 5)
+		std::cout << "To jest piatek\n";
+
+	if (numberDay == 6)
+		std::cout << "To jest sobota\n";
+
+	if (numberDay == 7)
+		std::cout << "To jest niedziela\n";
+
+}
+
+//Napisz program, który poprosi użytkownika o podanie dwóch liczb całkowitych i wyświetli większą z nich.
+void task9()
+{
+	int firstNumber, secondNumber;
+	std::cout << "Podaj pierwszą liczbę całkowita:\n";
+	std::cin >> firstNumber;
+	std::cout << "Podaj drugą całkowita:\n";
+	std::cin >> secondNumber;
+
+	if (firstNumber > secondNumber)
+		std::cout << firstNumber;
+	else
+		std::cout << secondNumber;
+}
+
+void task10()
+{
+	int numberYear;
+	std::cout << "Podaj rok\n";
+	std::cin >> numberYear;
+
+	if (numberYear % 400 == 0)
+		std::cout << "Ten rok jest przestępny\n";
+	else
+		std::cout << "Ten rok nie jest przestępny\n";
 }
 
 
@@ -208,5 +236,7 @@ int main()
 	//task5();
 	//task6();
 	//task7();
-	task8();
+	//task8();
+	//task9();
+	task10();
 }

@@ -217,14 +217,122 @@ void task10()
 	std::cout << "Podaj rok\n";
 	std::cin >> numberYear;
 
-	if (numberYear % 400 == 0)
+	if (numberYear % 4 == 0 && numberYear % 100 != 0 || numberYear % 400 == 0)
 		std::cout << "Ten rok jest przestępny\n";
 	else
 		std::cout << "Ten rok nie jest przestępny\n";
 }
 
+//.Napisz program, który poprosi użytkownika o podanie liczby całkowitej i sprawdzi, czy jest ona podzielna zarówno przez 3, jak i przez 5. Wyświetl odpowiedni komunikat.
+
+void task11()
+{
+	int firstNumber;
+	std::cout << "Podaj liczbę całkowitą\n";
+	std::cin >> firstNumber;
+
+	if (firstNumber % 3 == 0)
+		if (firstNumber % 5 == 0)
+			std::cout << "Ta liczba jest podzielna przez 3 i przez 5\n";
+		else
+			std::cout << "Ta liczba nie jest podzielna przez 5\n";
+	else
+		std::cout << "Ta liczba nie jest podzielna przez 3\n";
+}
+
+//Napisz program, który poprosi użytkownika o podanie masy ciała(w kilogramach) i wzrostu(w metrach).
+
+void task12()
+{
+	int bodyWeight, height, BMI;
+	std::cout << "Podaj swoja wagę\n";
+	std::cin >> bodyWeight;
+	std::cout << "Podaj swój wzrost (w metrach)\n";
+	std::cin >> height;
+	BMI = bodyWeight / (height + height);
+
+	if (BMI < 16)
+		std::cout << "jesteś wygłodzony\n";
+	if (BMI == 16 || BMI < 17)
+		std::cout << "jesteś wychudzony\n";
+	if (BMI == 17 || BMI < 18.5)
+		std::cout << "masz niedowagę\n";
+	if (BMI == 18.5 || BMI < 25)
+		std::cout << "twoja waga jest prawidłowa\n";
+	if (BMI == 16 || BMI < 30)
+		std::cout << "masz nadwagę\n";
+	if (BMI == 16 || BMI < 35)
+		std::cout << "masz otyłość I stopnia\n";
+	if (BMI == 16 || BMI)
+		std::cout << "masz otyłość II stopnia\n";
+	if (BMI > 40)
+		std::cout << "masz skrajną otyłość\n";
+}
+
+//Napisz program, który poprosi użytkownika o podanie długości trzech odcinków i sprawdzi, czy można zbudować z nich trójkąt.Wyświetl odpowiedni komunikat.
+
+void task13()
+{
+	int firstSide, secondSide, thirdSide;
+	
+	std::cout << "Podaj długość pierwszego boku\n";
+	std::cin >> firstSide;
+	std::cout << "Podaj długość drugiego boku\n";
+	std::cin >> secondSide;
+	std::cout << "Podaj długość trzeciego boku\n";
+	std::cin >> thirdSide;
+	
+	if (firstSide == 0 || secondSide == 0 || thirdSide == 0)
+		std::cout << "Bok jest równy zero\n";
+	else
+		if (firstSide + secondSide > thirdSide && secondSide + thirdSide > firstSide && firstSide + thirdSide > secondSide)
+			std::cout << "Da sie zrobić trójkąt\n";
+		else
+			std::cout << "Nie da się zrobić trójkąta\n";
+}
+
+//Napisz program, który poprosi użytkownika o podanie liczby dodatniej i obliczy jej pierwiastek kwadratowy, jeśli jest to możliwe.Wyświetl wynik lub odpo
+//wiedni komunikat, jeśli liczba jest ujemna.
+
+void task14()
+{
+	int firstNumber;
+	std::cout << "Podaj liczbę dodatnią\n";
+	std::cin >> firstNumber;
 
 
+
+
+
+
+
+
+
+
+
+}
+
+
+void task15()
+{
+	int day, month, year;
+	std::cout << "podaj dzień\n";
+	std::cin >> day;
+	std::cout << "podaj miesiąc\n";
+	std::cin >> month;
+	std::cout << "podaj rok\n";
+	std::cin >> year;
+
+	if (day >= 1 && day <= 31)
+		&& month >=1 && month <=12
+		&& year != 0
+
+
+
+
+
+
+}
 
 int main()
 {
@@ -238,5 +346,10 @@ int main()
 	//task7();
 	//task8();
 	//task9();
-	task10();
+	//task10();
+	//task11();
+	//task12();
+	//task13();
+	task14();
+	task15();
 }

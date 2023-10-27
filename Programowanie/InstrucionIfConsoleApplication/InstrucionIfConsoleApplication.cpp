@@ -274,14 +274,14 @@ void task12()
 void task13()
 {
 	int firstSide, secondSide, thirdSide;
-	
+
 	std::cout << "Podaj długość pierwszego boku\n";
 	std::cin >> firstSide;
 	std::cout << "Podaj długość drugiego boku\n";
 	std::cin >> secondSide;
 	std::cout << "Podaj długość trzeciego boku\n";
 	std::cin >> thirdSide;
-	
+
 	if (firstSide == 0 || secondSide == 0 || thirdSide == 0)
 		std::cout << "Bok jest równy zero\n";
 	else
@@ -323,14 +323,78 @@ void task15()
 	std::cout << "podaj rok\n";
 	std::cin >> year;
 
-	if (day >= 1 && day <= 31)
-		&& month >=1 && month <=12
+	if (day >= 1 && day <= 31);
+	&& year != 0
+		&& month >= 1 && month <= 12
 		&& year != 0
 
+		&& ((month == 4 || month == 6 || month == 9 || month == 11) && day != 31)
+
+		&& month == 2 && (day >= 28
+			|| day == 29 && (year % 4 == 0 && year % 100 != 0 || year % 400 == 0))
+		&& month == 2 && (day >= 28
+			|| day == 29 && (year % 4 == 0 && year % 100 != 0 || year % 400 == 0))
+}
 
 
+void task16()
+{
+	int dayOfWeek;
+	std::cout << "Podaj numer dnia tygodnia\n";
+	std::cin >> dayOfWeek;
 
+	if (dayOfWeek == 1)
+		std::cout << "Podniedziałek\n";
+	else if (dayOfWeek == 2)
+		std::cout << "Wtorek\n";
+	else if (dayOfWeek == 3)
+		std::cout << "Środa\n";
+	else if (dayOfWeek == 4)
+		std::cout << "Czwartek\n";
+	else if (dayOfWeek == 5)
+		std::cout << "Piątek\n";
+	else if (dayOfWeek == 6)
+		std::cout << "Sobota\n";
+	else if (dayOfWeek == 7 || dayOfWeek == 0)
+		std::cout << "Niedziela\n";
+	else
+		std::cout << "Dzień niepoprawny\n";
 
+	switch (dayOfWeek)
+	{
+	case 1:
+		std::cout << "Podniedziałek\n";
+		break;
+	case 2:
+		std::cout << "Wtorek\n";
+		break;
+	case 3:
+		std::cout << "Środa\n";
+		break;
+	case 4:
+		std::cout << "Czwartek\n";
+		break;
+	case 5:
+		std::cout << "Piątek\n";
+		break;
+	case 6:
+		std::cout << "Sobota\n";
+		break;
+	case 0:
+	case 7:
+		std::cout << "Niedziela\n";
+		break;
+	default:
+		std::cout << "Dzień niepoprawny\n";
+	}
+}
+
+int main()
+{
+	task1();
+
+	float number = 9;
+	double root = pow(number, 19) + sqrt(number) + 8;
 
 }
 
@@ -350,6 +414,7 @@ int main()
 	//task11();
 	//task12();
 	//task13();
-	task14();
-	task15();
+	//task14();
+	//task15();
+	task16();
 }

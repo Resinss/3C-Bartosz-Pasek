@@ -120,18 +120,10 @@ void task4()
 	} while (upperRange > currentNumber);
 }
 
+void task5()
+{
 
-
-
-
-
-
-
-
-
-
-
-
+}
 
 int main()
 {
@@ -139,5 +131,6 @@ int main()
 	//task2();
 	//task3();
 	task4();
+	//task5();
 }
 

@@ -221,6 +221,27 @@ void task6()
 	} while (number != 0);
 }
 
+//napisz program który poprosi u¿ytkownika o wprowadzenie dowolnej liczby ca³kowitej/
+//nastepnie program powinien obliczyc i wyswietlic liczbe cyfr.
+
+void task7()
+{
+	int number;
+	std::cout << "Podaj liczbe\n";
+	std::cin >> number;
+
+	int sum = 0;
+	int rest;
+
+	do
+	{
+		rest = number % 10;
+		sum = +rest;
+		number = number / 10;
+    }while (number != 0);
+	std::cout << "Liczba cyfr wynosi:" << number << "\n";
+}
+
 
 int main()
 {
@@ -229,6 +250,7 @@ int main()
 	//task3();
 	//task4();
 	//task5();
-	task6();
+	//task6();
+	task7();
 }
 

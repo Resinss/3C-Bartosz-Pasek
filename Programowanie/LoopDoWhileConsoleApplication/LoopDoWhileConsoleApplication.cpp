@@ -226,20 +226,16 @@ void task6()
 
 void task7()
 {
-	int number;
+	int number, rest;
 	std::cout << "Podaj liczbe\n";
 	std::cin >> number;
-
-	int sum = 0;
-	int rest;
 
 	do
 	{
 		rest = number % 10;
-		sum = +rest;
+		std::cout << rest << ", ";
 		number = number / 10;
-    }while (number != 0);
-	std::cout << "Liczba cyfr wynosi:" << number << "\n";
+	} while (number != 0);
 }
 
 

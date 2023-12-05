@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoopDoWhileConsoleApplicati
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoopWhileConsoleApplication", "LoopWhileConsoleApplication\LoopWhileConsoleApplication.vcxproj", "{667F4C04-510C-4B3C-AA07-90BFCA7835D7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoopForConsoleApplication", "LoopForConsoleApplication\LoopForConsoleApplication.vcxproj", "{00B4981C-F635-4257-B87B-B29E2BAB3714}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -65,6 +67,14 @@ Global
 		{667F4C04-510C-4B3C-AA07-90BFCA7835D7}.Release|x64.Build.0 = Release|x64
 		{667F4C04-510C-4B3C-AA07-90BFCA7835D7}.Release|x86.ActiveCfg = Release|Win32
 		{667F4C04-510C-4B3C-AA07-90BFCA7835D7}.Release|x86.Build.0 = Release|Win32
+		{00B4981C-F635-4257-B87B-B29E2BAB3714}.Debug|x64.ActiveCfg = Debug|x64
+		{00B4981C-F635-4257-B87B-B29E2BAB3714}.Debug|x64.Build.0 = Debug|x64
+		{00B4981C-F635-4257-B87B-B29E2BAB3714}.Debug|x86.ActiveCfg = Debug|Win32
+		{00B4981C-F635-4257-B87B-B29E2BAB3714}.Debug|x86.Build.0 = Debug|Win32
+		{00B4981C-F635-4257-B87B-B29E2BAB3714}.Release|x64.ActiveCfg = Release|x64
+		{00B4981C-F635-4257-B87B-B29E2BAB3714}.Release|x64.Build.0 = Release|x64
+		{00B4981C-F635-4257-B87B-B29E2BAB3714}.Release|x86.ActiveCfg = Release|Win32
+		{00B4981C-F635-4257-B87B-B29E2BAB3714}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +85,7 @@ Global
 		{F2935E1D-0EA2-4957-AF78-04B55876B1CC} = {F77CDA6E-CD9F-4869-8CF6-ABB9EEC3A363}
 		{D10090CE-F756-491F-9D00-7E867DE84A76} = {F77CDA6E-CD9F-4869-8CF6-ABB9EEC3A363}
 		{667F4C04-510C-4B3C-AA07-90BFCA7835D7} = {F77CDA6E-CD9F-4869-8CF6-ABB9EEC3A363}
+		{00B4981C-F635-4257-B87B-B29E2BAB3714} = {F77CDA6E-CD9F-4869-8CF6-ABB9EEC3A363}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F99647CA-2D29-4AD6-80F2-496D1DE8191B}

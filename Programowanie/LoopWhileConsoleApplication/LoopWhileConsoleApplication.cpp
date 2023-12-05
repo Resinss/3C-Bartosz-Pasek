@@ -1,6 +1,7 @@
 
 #include <iostream>
 
+//Napisz program który policzy syme cyfr podanej przez u¿ytkownika.
 void task1()
 {
 	int number;
@@ -46,6 +47,7 @@ void task1()
 	//4125
 }
 
+//Napisz program, który policzy NWD dwóch liczb.
 void task2()
 {
 	int firstNumber, secondNumber;
@@ -167,10 +169,42 @@ void task3()
 		std::cout << "Liczba nie jest palindromem\n";
 }
 
+//Napisz program, który wyswietli "Hello world" tyle razy ile chce u¿ytkownuik.
+void task4()
+{
+	int howManyTimes;
+	std::cout << "Podaj ile razy ma wyswietlic\n";
+	std::cin >> howManyTimes;
+
+	int i = 0;
+	while (i != howManyTimes)
+	{
+		std::cout << "Hello world\n";
+		i++;
+	}
+}
+
+//Napisz program, który wyœwietli liczby parzyste do podanej przez u¿ytkownika liczby.
+void task5()
+{
+	int upperRange;
+	std::cout << "Podaj gorna granice do wyswietlenia\n";
+	std::cin >> upperRange;
+
+	int i = 0;
+	while (i <= upperRange)
+	{
+		std::cout << i << "\n";
+		i += 2;
+	}
+}
+
 int main()
 {
 	//task1();
 	//task2();
-	task3();
+	//task3();
+	//task4();
+	task5();
 }
 

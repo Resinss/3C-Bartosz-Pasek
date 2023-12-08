@@ -103,12 +103,44 @@ void task4()
 		std::cout << "Liczba nie jest dokomnała\n";
 }
 
+// Program wyświetlający na ekranie kwadraty liczb od 1 do 10 (np. 1, 4, 9, 16 itd.)
+void task5()
+{
+	
+	int i = 0;
+	for (int number = 1; number <= 10; number++)
+	{
+     	std::cout << i << "\n";
+		i = number * number;
+	}
+		std::cout << i;
+	
+}
+
+// Program obliczający n!.
+void task6()
+{
+	unsigned long long silnia, idk;
+	std::cout << "Podaj liczne ktora bedzie silnia\n";
+	std::cin >> silnia;
+
+	idk = silnia;
+	silnia = 1;
+	for (int number = 1; number <= idk; number++)
+	{
+		silnia  = silnia * number;
+	}
+	std::cout << silnia << "\n";
+}
+
 int main()
 {
     //task1();
 	//task2();
 	//task3();
-	task4();
+	//task4();
+	//task5();
+	task6();
 }
 
 

@@ -118,20 +118,54 @@ void task5()
 }
 
 // Program obliczający n!.
-void task6()
-{
-	unsigned long long silnia, idk;
-	std::cout << "Podaj liczne ktora bedzie silnia\n";
-	std::cin >> silnia;
 
-	idk = silnia;
-	silnia = 1;
-	for (int number = 1; number <= idk; number++)
+//Program wyświetlający na ekranie silnie z liczb od 1 do 10 (np. 1!, 2!, 3!, 4! itd.)
+void task7()
+{
+	long long tmpNumber = 0;
+	long long result = 1;
+	long long whatNumber = 0;
+
+	for (int i = 1; i <= 10; i++)
 	{
-		silnia  = silnia * number;
+		whatNumber++;
+		for (int j = 1; j < whatNumber; j++)
+		{
+			tmpNumber++;
+			result = result * tmpNumber;
+		}
+		std::cout << whatNumber << "! = " << result << "\n";
 	}
-	std::cout << silnia << "\n";
 }
+
+// Program wyświetlający na ekranie tabliczkę mnożenia od 1 do 9 (np. 1x1=1, 1x2=2, 1x3=3 itd.).
+void task8()
+{
+	for (int x = 0; x < 10; x++)
+	{
+		for (int y = 0; y < 10; y++)
+		{
+			std::cout << x << "x" << y  << "=" << x * y << "\t";
+		}
+
+		std::cout << "\n";
+	}
+}
+
+// Program wyświetlający na ekranie wszystkie liczby podzielne przez 3 z zakresu od 1 do 100
+void task9()
+{
+	for (int a = 1; a < 101; a++)
+	{
+
+	}
+}
+
+void task11()
+{
+
+}
+
 
 int main()
 {
@@ -140,7 +174,12 @@ int main()
 	//task3();
 	//task4();
 	//task5();
-	task6();
+	//task6();
+	//task7();
+	//task8();
+	//task9();
+	//task10();
+	task11();
 }
 
 

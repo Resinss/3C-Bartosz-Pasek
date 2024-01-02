@@ -138,6 +138,83 @@ void task7()
     std::cout << "W tym ciagu jest " << numberOfVowel << " samog³osek i " << numberOfConsonant << " spó³g³osek\n";
 }
 
+    //Poproœ u¿ytkownika o wprowadzenie liczby ca³kowitej w systemie dziesiêtnym.
+//Nastêpnie skonwertuj tê liczbê na system dwójkowy (binarny) i wyœwietl wynik.
+    void task8()
+    {
+        int numberFromUser;
+        int tmpNumber;
+        std::string tmpNumberInBin;
+        std::string numberInBin;
+        std::cout << "Podaje liczbe: \n";
+        std::cin >> numberFromUser;
+        tmpNumber = numberFromUser;
+
+        do
+        {
+            tmpNumberInBin = tmpNumber / 2;
+            numberInBin = numberInBin + tmpNumberInBin;
+        } while (tmpNumber == 0);
+
+        std::cout << numberInBin << "\n";
+
+
+
+    }
+
+
+    // Program sprawdzaj¹cy czy podany ci¹g znaków jest palindromem 
+    // (czyli takim, który czytany od ty³u jest taki sam, jak czytany od przodu, np. "kajak")
+    void task9()
+    {
+        std::string textFromUser;
+        std::cout << "podaj tekst\n";
+        std::cin >> textFromUser;  
+
+        //wersja 1
+        std::string reverseText;
+       
+        for (int i = textFromUser.length() - 1; i >= 0; i--)
+        {
+            reverseText = reverseText + textFromUser[i];
+        }
+       /*
+        for (int i = textFromUser.length() - 1; i >= 0; i--)
+        {
+            reverseText = reverseText + textFromUser[i];
+        }
+        */
+        
+        if (textFromUser == reverseText)
+
+                std::cout << "ten tekst jest palindromem\n";
+            else
+                std::cout << "ten tekst nie jest palindromem\n";
+       
+        //wersja 2
+        bool isPalindrome = true;
+
+        for (int signFromBegining = 0, signFormEnd = textFromUser.length() - 1; signFromBegining < signFormEnd; signFromBegining++, signFormEnd--)
+        {
+            if (textFromUser[signFromBegining] != textFromUser[signFormEnd])
+            {
+                isPalindrome = false;
+                break;
+            }
+        }
+
+        if (isPalindrome /*== true*/)
+            std::cout << "Ten tekst jest palindromem\n";
+        else
+            std::cout << "Ten tekst nie jest palindromem\n";
+    }
+
+    void task10()
+    {
+
+    }
+
+
 int main()
 {
     setlocale(LC_CTYPE, "polish");
@@ -150,6 +227,8 @@ int main()
      //task7();
      //task8();
      //task9();
+    task10();
+
 }
 
 /*

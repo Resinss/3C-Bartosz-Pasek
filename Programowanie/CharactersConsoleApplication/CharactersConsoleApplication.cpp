@@ -162,7 +162,6 @@ void task7()
 
     }
 
-
     // Program sprawdzaj¹cy czy podany ci¹g znaków jest palindromem 
     // (czyli takim, który czytany od ty³u jest taki sam, jak czytany od przodu, np. "kajak")
     void task9()
@@ -209,9 +208,38 @@ void task7()
             std::cout << "Ten tekst nie jest palindromem\n";
     }
 
+    //Algorytm szyfrowania AtBash Cipher - algorytm szyfruj¹cy, w którym ka¿da litera jest zamieniana na literê z przeciwnej strony alfabetu (np. A na Z, B na Y itd.)
     void task10()
     {
+        std::string textFromUser;
+        std::cout << "podaj tekst\n";
+        std::cin >> textFromUser;
 
+        for(int i = 0; i < textFromUser.length(); i++)
+        {
+            if (textFromUser[i] >= 'a' && textFromUser[i] <= 'z')
+                textFromUser[i] = 'z' - (textFromUser[i] - 'a');
+
+            if (textFromUser[i] >= 'A' && textFromUser[i] <= 'Z')
+                textFromUser[i] = 'Z' - (textFromUser[i] - 'A');
+
+            if (textFromUser[i] >= '0' && textFromUser[i] <= '9')
+                textFromUser[i] = '9' - (textFromUser[i] - '0');
+        }
+        std::cout << "zaszyfrowany tekst: " << textFromUser << "\n";
+
+        for (int i = 0; i < textFromUser.length(); i++)
+        {
+            if (textFromUser[i] >= 'a' && textFromUser[i] <= 'z')
+                textFromUser[i] = 'a' + ('z' - textFromUser[i]);
+
+            if (textFromUser[i] >= 'A' && textFromUser[i] <= 'Z')
+                textFromUser[i] = 'A' + ('Z' - textFromUser[i]);
+
+            if (textFromUser[i] >= '0' && textFromUser[i] <= '9')
+                textFromUser[i] = '0' + ('9' - textFromUser[i]);
+        }
+        std::cout << "rozszfrowany tekst " << textFromUser << "\n";
     }
 
 

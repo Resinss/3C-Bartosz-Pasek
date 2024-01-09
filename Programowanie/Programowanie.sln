@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.Kolekcje", "03.Kolekcje"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CharactersConsoleApplication", "CharactersConsoleApplication\CharactersConsoleApplication.vcxproj", "{9D13FC8E-2945-4195-8AD4-A4B7B6B8499B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArrayConsoleApplication", "ArrayConsoleApplication\ArrayConsoleApplication.vcxproj", "{5B95710D-C311-442A-B702-EB5B8D32DAC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -87,6 +89,14 @@ Global
 		{9D13FC8E-2945-4195-8AD4-A4B7B6B8499B}.Release|x64.Build.0 = Release|x64
 		{9D13FC8E-2945-4195-8AD4-A4B7B6B8499B}.Release|x86.ActiveCfg = Release|Win32
 		{9D13FC8E-2945-4195-8AD4-A4B7B6B8499B}.Release|x86.Build.0 = Release|Win32
+		{5B95710D-C311-442A-B702-EB5B8D32DAC6}.Debug|x64.ActiveCfg = Debug|x64
+		{5B95710D-C311-442A-B702-EB5B8D32DAC6}.Debug|x64.Build.0 = Debug|x64
+		{5B95710D-C311-442A-B702-EB5B8D32DAC6}.Debug|x86.ActiveCfg = Debug|Win32
+		{5B95710D-C311-442A-B702-EB5B8D32DAC6}.Debug|x86.Build.0 = Debug|Win32
+		{5B95710D-C311-442A-B702-EB5B8D32DAC6}.Release|x64.ActiveCfg = Release|x64
+		{5B95710D-C311-442A-B702-EB5B8D32DAC6}.Release|x64.Build.0 = Release|x64
+		{5B95710D-C311-442A-B702-EB5B8D32DAC6}.Release|x86.ActiveCfg = Release|Win32
+		{5B95710D-C311-442A-B702-EB5B8D32DAC6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,6 +109,7 @@ Global
 		{667F4C04-510C-4B3C-AA07-90BFCA7835D7} = {F77CDA6E-CD9F-4869-8CF6-ABB9EEC3A363}
 		{00B4981C-F635-4257-B87B-B29E2BAB3714} = {F77CDA6E-CD9F-4869-8CF6-ABB9EEC3A363}
 		{9D13FC8E-2945-4195-8AD4-A4B7B6B8499B} = {0A6BC50D-9F82-4BBD-AA4A-5D0F4C0405CA}
+		{5B95710D-C311-442A-B702-EB5B8D32DAC6} = {0A6BC50D-9F82-4BBD-AA4A-5D0F4C0405CA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F99647CA-2D29-4AD6-80F2-496D1DE8191B}

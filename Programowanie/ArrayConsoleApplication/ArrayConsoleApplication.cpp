@@ -19,10 +19,39 @@ void task1()
 }
 
 
+void task2()
+{
+	//LOWER_RANGE; UPPER_RANGE> przy za³o¿eniu, ¿e LOWER_RANGE <= UPPER_RANGE
+	const unsigned short LOWER_RANGE = 5;
+	const unsigned short UPPER_RANGE = 7;
+
+	const unsigned short ARRAY_SIZE = 3;
+	int numbers[ARRAY_SIZE];
+
+	srand(time(0));
+	std::cout << "wylosowane liczby\n";
+	for (int i = 0; i < ARRAY_SIZE; i++)
+	{
+		numbers[i] = rand() % (UPPER_RANGE - LOWER_RANGE + 1) + LOWER_RANGE;
+		std::cout << numbers[i] << ", ";
+	}
+	std::cout << "\n";
+
+	int sum = 0;
+	for (int i = 0; i < ARRAY_SIZE; i++)
+	{
+		sum = sum + numbers[i];
+	}
+
+	double avg = sum * 1.0 / ARRAY_SIZE;
+	std::cout << "œrednia wynosi: " << avg << "\n";
+}
+
 int main()
 {
 	setlocale(LC_CTYPE, "polish");
-	task1();
+	//task1();
+	task2();
 
 }
 

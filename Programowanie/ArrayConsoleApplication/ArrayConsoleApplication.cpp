@@ -62,6 +62,46 @@ void task3()
 		numbers[i] = rand() % (UPPER_RANGE - LOWER_RANGE + 1) + LOWER_RANGE;
 		std::cout << numbers[i] << ", ";
 	}
+	std::cout << "\n";
+
+	int max = numbers[0];
+	std::cout << numbers[0];
+	
+	for (int i = 1; i < ARRAY_SIZE; i++)
+	{
+		if (numbers[i] > max)
+			max = numbers[i];
+	}
+	std::cout << "max to:" << max << "\n";
+
+	int min = numbers[0];
+	for (int i = 1; i < ARRAY_SIZE; i++)
+	{
+		if (numbers[i] < min)
+			min = numbers[i];
+	}
+	std::cout << "Min to:" << min << "\n";	0
+}
+
+
+void task4()
+{
+	const long long UPPER_RANGE = 70;
+	//wersja 1
+
+	for (long long numberToCheck = 2; numberToCheck <= UPPER_RANGE; numberToCheck++)
+	{
+		bool isPrime = time;
+		for (long long i = 2; i <= numberToCheck / 2; i++)
+		{
+			if (numberToChcek % i == 0)
+			{
+				isPrime = false;
+				break;
+			}
+		}
+		if
+	}
 }
 
 int main()
@@ -69,7 +109,8 @@ int main()
 	setlocale(LC_CTYPE, "polish");
 	//task1();
 	//task2();
-	task3();
+	//task3();
+	task4();
 
 }
 

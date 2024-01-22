@@ -86,22 +86,68 @@ void task3()
 
 void task4()
 {
-	const long long UPPER_RANGE = 70;
+	const long long UPPER_RANGE = 1000000;
+
 	//wersja 1
 
 	for (long long numberToCheck = 2; numberToCheck <= UPPER_RANGE; numberToCheck++)
 	{
-		bool isPrime = time;
+		bool isPrime = true;
 		for (long long i = 2; i <= numberToCheck / 2; i++)
 		{
-			if (numberToChcek % i == 0)
+			if (numberToCheck % i == 0)
 			{
 				isPrime = false;
 				break;
 			}
 		}
-		if
+
+		if (isPrime)
+			std::cout << numberToCheck << ", ";
 	}
+	std::cout << "\n";
+
+	//wersja 2
+	bool sieveOfEratosthenes[UPPER_RANGE + 1];
+
+	for (unsigned long long i = 2; i <= UPPER_RANGE; i++)
+	{
+		sieveOfEratosthenes[i] = true;
+	}
+
+	for (unsigned long long number = 2; number <= UPPER_RANGE; number++)
+	{
+		if (sieveOfEratosthenes[number] /*== true*/)
+		{
+			for (long long numberToCrossOut = number + number; numberToCrossOut <= UPPER_RANGE; numberToCrossOut = numberToCrossOut + number)
+				sieveOfEratosthenes[numberToCrossOut] = false;
+		}
+	}
+
+	for (unsigned long long i = 2; i <= UPPER_RANGE; i++)
+	{
+		if (sieveOfEratosthenes[i] /*== true*/)
+			std::cout << i << ", ";
+	}
+	std::cout << "\n";
+}
+
+//Napisz program, który wczyta numer dnia tygodnia a nastêpnie wyœwietli nazwe tego dnia lub komunikat dnia.
+void task5()
+{
+	int numberOfWeek;
+	std::cout << "podaj numer dnia tygodnia\n";
+	std::cin >> numberOfWeek;
+
+	std::string dayNames[] = { "Poniedzia³ek", "Wtorek", "Œroda", "Czartek", "Pi¹tek ", "Sobota", "Niedziela" };
+	//dayNames[0] = "poniedzia³ek";
+	//dayNames[1] = "wrorek';
+	//kontynuacja dni
+
+	if (numberOfWeek >= 0 && numberOfWeek <= 6)
+		std::cout << "ten dzien to" << dayNames[numberOfWeek] << "\n";
+	else
+		std::cout << "niuepoprawny dzien\n";
 }
 
 int main()
@@ -110,7 +156,9 @@ int main()
 	//task1();
 	//task2();
 	//task3();
-	task4();
+	//task4();
+	task5();
+
 
 }
 

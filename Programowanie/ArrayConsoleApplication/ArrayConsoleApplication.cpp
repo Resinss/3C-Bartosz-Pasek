@@ -150,6 +150,47 @@ void task5()
 		std::cout << "niuepoprawny dzien\n";
 }
 
+//napisz program który posortuje podane elementy
+void task6()
+{
+	const unsigned short LOWER_RANGE = 5;
+	const unsigned short UPPER_RANGE = 7;
+
+	const unsigned short ARRAY_SIZE = 3;
+	int numbers[ARRAY_SIZE];
+
+	srand(time(0));
+	std::cout << "wylosowane liczby\n";
+	for (int i = 0; i < ARRAY_SIZE; i++)
+	{
+		numbers[i] = rand() % (UPPER_RANGE - LOWER_RANGE + 1) + LOWER_RANGE;
+		std::cout << numbers[i] << ", ";
+	}
+	std::cout << "\n";
+	//-------------------------------------------------------------------------------------------------------------------
+
+	for (int i = 0; i < ARRAY_SIZE - 1; i++)
+	{
+		int minIndex = 1;
+		for (int j = i + 1; j < ARRAY_SIZE; j++)
+		{
+			if (numbers[j] < numbers[minIndex])
+				minIndex = j;
+		}
+
+		int tmp = numbers[minIndex];
+		numbers[minIndex = numbers[i];
+		numbers[i] = tmp;
+	}
+
+	std::cout << "ZPosortowane liczby:\n";
+	for (int i = 0; i < ARRAY_SIZE; i++)
+	{
+		std::cout << numbers[i] << ", ";
+	}
+	std::cout << "\n";
+}
+
 int main()
 {
 	setlocale(LC_CTYPE, "polish");
@@ -157,8 +198,8 @@ int main()
 	//task2();
 	//task3();
 	//task4();
-	task5();
-
+	//task5();
+	//task6();
 
 }
 

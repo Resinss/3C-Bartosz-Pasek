@@ -80,7 +80,7 @@ void task3()
 		if (numbers[i] < min)
 			min = numbers[i];
 	}
-	std::cout << "Min to:" << min << "\n";	0
+	std::cout << "Min to:" << min << "\n";	
 }
 
 
@@ -153,6 +153,49 @@ void task5()
 //napisz program który posortuje podane elementy
 void task6()
 {
+	const short LOWER_RANGE = 0;
+	const short UPPER_RANGE = 70;
+
+	const unsigned short ARRAY_SIZE = 10;
+	int numbers[ARRAY_SIZE];
+
+	srand(time(0));
+
+	std::cout << "wylosowane liczby:\n";
+	for (int i = 0; i < ARRAY_SIZE; i++)
+	{
+		numbers[i] = rand() % (UPPER_RANGE - LOWER_RANGE + 1) + LOWER_RANGE;
+		std::cout << numbers[i] << ", ";
+	}
+	std::cout << "\n";
+	//----------------------------------------------------------------------------
+
+	for (int i = 0; i < ARRAY_SIZE - 1; i++)
+	{
+		int minIndex = i;
+		for (int j = i + 1; j < ARRAY_SIZE; j++)
+		{
+			if (numbers[j] < numbers[minIndex])
+				minIndex = j;
+		}
+
+		int tmp = numbers[minIndex];
+		numbers[minIndex] = numbers[i];
+		numbers[i] = tmp;
+	}
+
+	std::cout << "Posortowane liczby:\n";
+	for (int i = 0; i < ARRAY_SIZE; i++)
+	{
+		std::cout << numbers[i] << ", ";
+	}
+	std::cout << "\n";
+}
+
+
+//napisz program który posortuje tablice liczb sposobem przez wstawianie
+void task7()
+{
 	const unsigned short LOWER_RANGE = 5;
 	const unsigned short UPPER_RANGE = 7;
 
@@ -169,21 +212,55 @@ void task6()
 	std::cout << "\n";
 	//-------------------------------------------------------------------------------------------------------------------
 
-	for (int i = 0; i < ARRAY_SIZE - 1; i++)
+	for (int i = 1; i < ARRAY_SIZE; i++)
 	{
-		int minIndex = 1;
-		for (int j = i + 1; j < ARRAY_SIZE; j++)
-		{
-			if (numbers[j] < numbers[minIndex])
-				minIndex = j;
-		}
+		int pom = numbers[i];
 
-		int tmp = numbers[minIndex];
-		numbers[minIndex = numbers[i];
-		numbers[i] = tmp;
+		int j;
+		for (j = i - 1; j >= 0 && numbers[j] > pom; j--)
+		{
+			numbers[j + 1] = numbers[j];
+		}
+		numbers[j + 1] = pom;
 	}
 
-	std::cout << "ZPosortowane liczby:\n";
+	std::cout << "posortowane liczby:\n";
+	for (int i = 0; i < ARRAY_SIZE; i++)
+	{
+		std::cout << numbers[i] << ", ";
+	}
+	std::cout << "\n";
+}
+	
+//napisz program który posortuje tablice liczb sposobem bombelkowym
+void task8()
+{
+
+	const unsigned short LOWER_RANGE = 1;
+	const unsigned short UPPER_RANGE = 70;
+
+	const unsigned short ARRAY_SIZE = 10;
+	int numbers[ARRAY_SIZE];
+
+	srand(time(0));
+	std::cout << "wylosowane liczby\n";
+	for (int i = 0; i < ARRAY_SIZE; i++)
+	{
+		numbers[i] = rand() % (UPPER_RANGE - LOWER_RANGE + 1) + LOWER_RANGE;
+		std::cout << numbers[i] << ", ";
+	}
+	std::cout << "\n";
+	//-------------------------------------------------------------------------------------------------------------------
+
+	for(int i = 0; i < ARRAY_SIZE - 1; i++)
+		for (int j = 0; i < ARRAY_SIZE - 1; i++)
+			if (numbers[j] > numbers[j + 1])
+			{
+				int tmp = numbers[j];
+				numbers[j] = numbers[j + 1];
+				numbers[j] = tmp;
+			}
+	std::cout << "posortowane liczby :\n";
 	for (int i = 0; i < ARRAY_SIZE; i++)
 	{
 		std::cout << numbers[i] << ", ";
@@ -200,6 +277,8 @@ int main()
 	//task4();
 	//task5();
 	//task6();
-
+	//task7();
+	//task8();
+	task9();
 }
 

@@ -268,6 +268,12 @@ void task8()
 	std::cout << "\n";
 }
 
+//
+void task9()
+{
+
+}
+
 int main()
 {
 	setlocale(LC_CTYPE, "polish");

@@ -64,24 +64,31 @@ void task6_GetNumber(int& number)
     std::cin >> number;
 }
 
+int sumOfNumbers(int fn, int sn)
+{
+    int s;
+    s = fn + sn;
+    return s;
+}
+
 int main()
 {
     setlocale(LC_CTYPE, "polish");
     /*task1();
     task1();
     */
-   
+
     /*
     task2("witaj swiecie!!");
     task2("ala ma kota");
     std::string text = "uczyæ sie programowania!!";
     task2(text);
     */
-    
+
     /*task3("jan", 35);
     task3("ala", 17);
     */
-   
+
     /*
     int number = 5;
     std::cout << "zmienna number w funkcji main :" << number << "\n";
@@ -93,7 +100,7 @@ int main()
 
     task4(9);
     const int NUMBER = 9;
-    task4(NUMBER);  
+    task4(NUMBER);
     */
 
     /*
@@ -107,8 +114,19 @@ int main()
     //task5(NUMBER); //BLAD - przez parametr mozna przeakazac tylko zmienna
     */
 
-    int numberFromUser = 5;
+    /*int numberFromUser = 5;
     task6_GetNumber(numberFromUser);
     std::cout << "u¿ytkownik podal liczbe " << numberFromUser << "\n";
+    */
+
+    int numberFromUser = 16;
+
+    double result = sqrt(numberFromUser);
+
+    int firstNumber, secondNumber, sum;
+    firstNumber = 9;
+    secondNumber = 1;
+    sum = sumOfNumbers(firstNumber, secondNumber);
+    std::cout << sum << "\n";
 }
 

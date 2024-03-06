@@ -83,7 +83,7 @@ long long calculateFactorial(long long n)
     return factorial;
 }
 
-longlong calculateFactorialV2(long long n)
+long long calculateFactorialV2(long long n)
 {
     if (n <= 1)
         return 1;

@@ -234,7 +234,7 @@ Fahrenheit: 77.0 °F
 Kelvin: 298.15 K
 */
 
-void showMenutempreature()
+void showMenuTemperature()
 {
 	system("cls");
 	std::cout << "Przelicznik temperatury\n";
@@ -245,8 +245,87 @@ void showMenutempreature()
 	std::cout << "0. Koniec programu\n";
 }
 
+void conversion(float value, int whatUnit)
+{
+	float valueInCelsiusz;
+	float valueInFahrenheit;
+	float valueInKelvin;
+	if (whatUnit == 1)
+	{
+		valueInFahrenheit = (value * 1.8) + 32;
+		valueInKelvin = value + 273.15;
+
+		std::cout << "Przeliczona temperatura: \n";
+		std::cout << "Fahrenheit: " << valueInFahrenheit << "°F\n";
+		std::cout << "Kelvin: " << valueInKelvin << "K\n";
+	}
+	else if (whatUnit == 2)
+	{
+		valueInCelsiusz = (value - 32) / 1.8;
+		valueInKelvin = (value + 459.67) * 5 / 9;
+
+		std::cout << "Przeliczona temperatura: \n";
+		std::cout << "Celsiusz: " << valueInCelsiusz << "°C\n";
+		std::cout << "Kelvin: " << valueInKelvin << "K\n";
+	}
+	else if (whatUnit == 3)
+	{
+		valueInCelsiusz = value - 273.15;
+		valueInFahrenheit = (value - 273.15) * 1.8 + 32;
+
+		std::cout << "Przeliczona temperatura: \n";
+		std::cout << "Celsiusz: " << valueInCelsiusz << "°C\n";
+		std::cout << "Fahrenheit: " << valueInFahrenheit << "°F\n";
+	}
+}
+
+void task2()
+{
+	while (true)
+	{
+		showMenuTemperature();
+
+		int whatUnit;
+		std::cout << "Wybór: ";
+		std::cin >> whatUnit;
+
+		float valueBeforeConversion;
+
+		if (whatUnit == 1)
+		{
+			std::cout << "Podaj temperaturê w stopniach Celsiusza: ";
+			std::cin >> valueBeforeConversion;
+		}
+		else if (whatUnit == 2)
+		{
+			std::cout << "Podaj temperaturê w stopniach Fahrenheit: ";
+			std::cin >> valueBeforeConversion;
+		}
+		else if (whatUnit == 3)
+		{
+			std::cout << "Podaj temperaturê w stopniach Kelvin: ";
+			std::cin >> valueBeforeConversion;
+		}
+		else if (whatUnit == 0)
+			break;
+		else
+		{
+			std::cout << "Nie ma takiej opcji\n";
+			system("pause");
+			continue;
+		}
+
+		// blad przy wartosci innej niz float dla valueBeforeConversion
+		std::cout << std::endl;
+		conversion(valueBeforeConversion, whatUnit);
+		std::cout << std::endl;
+		system("pause");
+	}
+}
+
 int main()
 {
 	//task1();
+	task2();
 	
 }

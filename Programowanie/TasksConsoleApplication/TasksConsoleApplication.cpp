@@ -460,7 +460,7 @@ void showMenuConverter()
 	std::cout << "1. Metry\n";
 	std::cout << "2. Centymetry\n";
 	std::cout << "3. Cale\n";
-	std::cout << "\n";98
+	std::cout << "\n";
 }
 
 double convertUnit(short fromWhichUnit, short toWhichUnit, double value)

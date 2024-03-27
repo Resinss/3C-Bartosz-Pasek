@@ -495,45 +495,95 @@ double convertUnit(short fromWhichUnit, short toWhichUnit, double value)
 	}
 }
 
+void showMenuConverter()
+{
+	system("cls");
+	std::cout << "Konwerter jednostek\n";
+	std::cout << "-----------------\n";
+	std::cout << "\n";
+	std::cout << "Wybierz jednostkê wejœciow¹:\n";
+	std::cout << "1. Metry\n";
+	std::cout << "2. Centymetry\n";
+	std::cout << "3. Cale\n";
+	std::cout << "\n";
+}
+
+short getWhichUnit()
+{
+	int whichUnit;
+	std::cout << "Wybór: ";
+
+	while (true)
+	{
+		std::cin >> whichUnit;
+
+		if (whichUnit == 1 ||
+			whichUnit == 2 ||
+			whichUnit == 3)
+		{
+			break;
+		}
+		else
+		{
+			std::cout << "Poda³eœ z³¹ opcje!\n";
+			std::cout << "Wybierz ponownie: ";
+			continue;
+		}
+	}
+	std::cout << "\n";
+	return whichUnit;
+}
+
+double convertUnit(short fromWhichUnit, short toWhichUnit, double value)
+{
+	double valueAfterConv;
+	if (fromWhichUnit == 1)
+	{
+		if (toWhichUnit == 1)
+			return valueAfterConv = value;
+		if (toWhichUnit == 2)
+			return valueAfterConv = value * 100;
+		if (toWhichUnit == 3)
+			return valueAfterConv = value * 39.37;
+	}
+	else if (fromWhichUnit == 2)
+	{
+		if (toWhichUnit == 1)
+			return valueAfterConv = value * 0.01;
+		if (toWhichUnit == 2)
+			return valueAfterConv = value;
+		if (toWhichUnit == 3)
+			return valueAfterConv = value * 0.39;
+	}
+	else if (fromWhichUnit == 3)
+	{
+		if (toWhichUnit == 1)
+			return valueAfterConv = value * 0.01;
+		if (toWhichUnit == 2)
+			return valueAfterConv = value * 2.54;
+		if (toWhichUnit == 3)
+			return valueAfterConv = value;
+	}
+}
+
 void task4()
 {
 	while (true)
 	{
 		showMenuConverter();
 
-		short fromWhichUnit;
-		std::cout << "Wybór: ";
-		std::cin >> fromWhichUnit;
+		short fromWhichUnit = getWhichUnit();
 
 		std::cout << "Wybierz jednostkê wyjœciow¹:\n";
 		std::cout << "1. Metry\n";
 		std::cout << "2. Centymetry\n";
 		std::cout << "3. Cale\n";
 
-		short toWhichUnit;
-		std::cout << "Wybór: ";
-		std::cin >> toWhichUnit;
+		short toWhichUnit = getWhichUnit();
 
-		std::cout << "\n";
-
-		double value;
-		std::cout << "Wartoœæ: ";
+		float value;
+		std::cout << "Podaj wartoœæ: ";
 		std::cin >> value;
-
-		switch (fromWhichUnit, toWhichUnit)
-		{
-		case 1:
-			break;
-		case 2:
-			break;
-		case 3:
-			break;
-
-		default:
-			std::cout << "Z³y wybór!\n";
-			system("pause");
-			continue;
-		}
 
 		std::cout << "Wynik konwersji: " << convertUnit(fromWhichUnit, toWhichUnit, value) << "\n";
 		system("pause");

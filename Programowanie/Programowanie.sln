@@ -43,6 +43,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SkyConsoleApplication", "Sk
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawasquarConsoleApplication", "DrawasquarConsoleApplication\DrawasquarConsoleApplication.vcxproj", "{C9022453-D3F7-45A8-9C42-FA4DE1C85965}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StoperConsoleApplication", "StoperConsoleApplication\StoperConsoleApplication.vcxproj", "{DFB291E0-5ECD-408D-9DEE-44217BACF89F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -163,6 +165,14 @@ Global
 		{C9022453-D3F7-45A8-9C42-FA4DE1C85965}.Release|x64.Build.0 = Release|x64
 		{C9022453-D3F7-45A8-9C42-FA4DE1C85965}.Release|x86.ActiveCfg = Release|Win32
 		{C9022453-D3F7-45A8-9C42-FA4DE1C85965}.Release|x86.Build.0 = Release|Win32
+		{DFB291E0-5ECD-408D-9DEE-44217BACF89F}.Debug|x64.ActiveCfg = Debug|x64
+		{DFB291E0-5ECD-408D-9DEE-44217BACF89F}.Debug|x64.Build.0 = Debug|x64
+		{DFB291E0-5ECD-408D-9DEE-44217BACF89F}.Debug|x86.ActiveCfg = Debug|Win32
+		{DFB291E0-5ECD-408D-9DEE-44217BACF89F}.Debug|x86.Build.0 = Debug|Win32
+		{DFB291E0-5ECD-408D-9DEE-44217BACF89F}.Release|x64.ActiveCfg = Release|x64
+		{DFB291E0-5ECD-408D-9DEE-44217BACF89F}.Release|x64.Build.0 = Release|x64
+		{DFB291E0-5ECD-408D-9DEE-44217BACF89F}.Release|x86.ActiveCfg = Release|Win32
+		{DFB291E0-5ECD-408D-9DEE-44217BACF89F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -182,6 +192,7 @@ Global
 		{7D21E5B6-8635-4A2B-8953-168E9CA0C5FE} = {E739B1E0-E362-45D5-83DF-DFA09705EF5D}
 		{3493DF9F-D5B6-4DB1-AB1F-B052AC43305C} = {E739B1E0-E362-45D5-83DF-DFA09705EF5D}
 		{C9022453-D3F7-45A8-9C42-FA4DE1C85965} = {E739B1E0-E362-45D5-83DF-DFA09705EF5D}
+		{DFB291E0-5ECD-408D-9DEE-44217BACF89F} = {E739B1E0-E362-45D5-83DF-DFA09705EF5D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F99647CA-2D29-4AD6-80F2-496D1DE8191B}

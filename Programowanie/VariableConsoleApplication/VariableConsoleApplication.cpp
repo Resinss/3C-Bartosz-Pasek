@@ -13,7 +13,7 @@
 *. Napisz program, który konwertuje wprowadzoną kwotę w jednej walucie na inną, korzystając z określonego kursu wymiany.
 */
 
-//Napisz program który wczyta liczbę od uzytkownika i ją wkleji 
+//Napisz program który wczyta liczbę od uzytkownika i ją wklejić 
 
 void task1()
 {

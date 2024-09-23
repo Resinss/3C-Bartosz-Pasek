@@ -11,5 +11,5 @@ void task1()
 	std::cin >> y;
 
 	double distance = sqrt(x * x + y * y);
-	std::cout << "Odleg³oœæ to " << distance << "\n";
+	std::cout << "Odleg³oœæ to"  << distance << "\n";
 }

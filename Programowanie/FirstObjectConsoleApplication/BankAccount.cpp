@@ -1,6 +1,4 @@
-﻿#include <iostream>
-#include "BankAccount.h"
-
+﻿
 
 void BankAccount.h :: AccountInformation()
 {
@@ -8,10 +6,11 @@ void BankAccount.h :: AccountInformation()
 	std::cout << "W³aœciciel: " << owner << "\n";
 	std::cout << "Saldo: " << balance << " " << currency << "\n";
 }
-void DepositToAccount(double amount)
+void BankAccount.h :: DepositToAccount(double amount)
 {
 	if (amount >= 0)
 		balance = balance + amount;
+
 }
 
 if (amount >= 0
@@ -19,5 +18,14 @@ if (amount >= 0
 {
 	balance = balance - amount;
 	return true;
+
 }
 return false;
+
+
+void TransferBeetwenAccounts(BankAccount& targetAccount, double amount)
+{
+	if (WidthdrawalFromAccount(amount))
+		targetAccount.DepositToAccount(amount);
+
+}

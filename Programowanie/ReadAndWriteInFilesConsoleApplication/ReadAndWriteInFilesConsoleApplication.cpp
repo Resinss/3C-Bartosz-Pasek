@@ -1,9 +1,28 @@
-// ReadAndWriteInFilesConsoleApplication.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 
 #include <iostream>
-
-int main()
+#include <fstream>
+//zapis do pliku
+void task1()
 {
-    std::cout << "Hello World!\n";
+    std::string name;
+    int age;
+
+    std::cout << "Podaj imie\n";
+    std::cin >> name;
+
+    std::cout << "Podaj wiek\n";
+    std::cin >> age;
+
+    std::ofstream writeToFile;
+    writeToFile.open("c:\\plik2C.txt", std::ios_base::app);
+
+    if (writeToFile.is_open() == true)
+    {
+        //praca na pliku
+        writeToFile << name << "\n" << age << "\n";
+        writeToFile.flush();
+        //wrirteToFile << age;
+
+        writeToFile.close();
+    }
 }

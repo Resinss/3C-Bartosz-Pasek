@@ -11,6 +11,8 @@ public:
 	void AccountInformation();
 
 	void DepositToAccount(double amount);
+
 	bool WidthdrawalFromAccount(double amount);
-	void TransferBeetweenAccounts(BankAccount& targetAccount,);
+
+	void TransferBeetweenAccounts(BankAccount& targetAccount);
 }

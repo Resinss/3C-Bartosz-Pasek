@@ -1,14 +1,32 @@
 ﻿#include <iostream>
 #include "BankAccount.h"
 
+BankAccount::BankAccount()
+{
+	balance = 1000;
+	owner = "Nieznany";
+	curency = "zł";
+}
+
+BankAccount::BankAccount(double b, std::string o, std::string c)
+{
+	//balance = b;
+	SetBalance(b);
+	owner = o;
+	curency = c;
+}
+
+
+
+
 void BankAccount::SetBalance(double b)
 {
-	if (b >= 0)
-			&& isBalanceExecute == false) //aby mozna bylo tylko raz wywolac metode
+	if (b >= 0
+			&& isSetBalanceExecute == false) //aby mozna bylo tylko raz wywolac metode
 	{
 		balance = b;
 
-		isBalanceExecute = true;
+		isSetBalanceExecute = true;
 	}
 }
 

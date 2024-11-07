@@ -64,7 +64,7 @@ void BankAccount::WidthdrawalFromAccount(double amount)
 return false;
 
 
-void TransferBetwenAccounts(BankAccount& targetAccount, double amount)
+void TransferBeetwenAccounts(BankAccount& targetAccount, double amount)
 {
 	if (WidthdrawalFromAccount(amount))
 		targetAccount.DepositToAccount(amount);

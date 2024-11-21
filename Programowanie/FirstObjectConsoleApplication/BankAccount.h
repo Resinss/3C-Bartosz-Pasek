@@ -1,14 +1,14 @@
-#pragma once
-#include <iostream>	
+
+#include <iostream>
 
 class BankAccount
 {
-private:
+protected:
 	double balance;
 	std::string owner;
 	std::string currency;
 
-	bool isSetBlanceExecute = false;
+	bool isSetBalanceExecute = false;
 
 	void SetBalance(double b);
 
@@ -22,5 +22,5 @@ public:
 
 	void DepositToAccount(double amount);
 	bool WidthdrawalFromAccount(double amount);
-	void TransferBetweenAccounts(BankAccount& targetAccount, double amount);
-}
+	void TransferBetweenAccounts(BankAccount& targetAcccount, double amount);
+};

@@ -63,6 +63,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StringConsoleApplication", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InheritanceConsoleApplication", "InheritanceConsoleApplication\InheritanceConsoleApplication.vcxproj", "{BEEE8D79-9F7A-41DA-9866-FCF6A33ED662}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FigureConsoleApplication", "FigureConsoleApplication\FigureConsoleApplication.vcxproj", "{15AE53E4-DCEC-49D4-8DFF-6CA189A9F982}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -231,6 +233,14 @@ Global
 		{BEEE8D79-9F7A-41DA-9866-FCF6A33ED662}.Release|x64.Build.0 = Release|x64
 		{BEEE8D79-9F7A-41DA-9866-FCF6A33ED662}.Release|x86.ActiveCfg = Release|Win32
 		{BEEE8D79-9F7A-41DA-9866-FCF6A33ED662}.Release|x86.Build.0 = Release|Win32
+		{15AE53E4-DCEC-49D4-8DFF-6CA189A9F982}.Debug|x64.ActiveCfg = Debug|x64
+		{15AE53E4-DCEC-49D4-8DFF-6CA189A9F982}.Debug|x64.Build.0 = Debug|x64
+		{15AE53E4-DCEC-49D4-8DFF-6CA189A9F982}.Debug|x86.ActiveCfg = Debug|Win32
+		{15AE53E4-DCEC-49D4-8DFF-6CA189A9F982}.Debug|x86.Build.0 = Debug|Win32
+		{15AE53E4-DCEC-49D4-8DFF-6CA189A9F982}.Release|x64.ActiveCfg = Release|x64
+		{15AE53E4-DCEC-49D4-8DFF-6CA189A9F982}.Release|x64.Build.0 = Release|x64
+		{15AE53E4-DCEC-49D4-8DFF-6CA189A9F982}.Release|x86.ActiveCfg = Release|Win32
+		{15AE53E4-DCEC-49D4-8DFF-6CA189A9F982}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -264,6 +274,7 @@ Global
 		{03CFB367-D7BC-4DFC-AA0D-8794DFB7BFFA} = {51C8C3A3-EF20-4A03-99E0-F700EBF05D7E}
 		{030F8189-D13A-4C1A-A530-0DA6BF4BF616} = {51C8C3A3-EF20-4A03-99E0-F700EBF05D7E}
 		{BEEE8D79-9F7A-41DA-9866-FCF6A33ED662} = {51C8C3A3-EF20-4A03-99E0-F700EBF05D7E}
+		{15AE53E4-DCEC-49D4-8DFF-6CA189A9F982} = {51C8C3A3-EF20-4A03-99E0-F700EBF05D7E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F99647CA-2D29-4AD6-80F2-496D1DE8191B}

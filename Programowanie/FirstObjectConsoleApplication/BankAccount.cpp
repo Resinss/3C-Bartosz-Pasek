@@ -5,7 +5,7 @@ BankAccount::BankAccount()
 {
 	balance = 1000;
 	owner = "Nieznany";
-	curency = "zł";
+	currency = "z³";
 }
 
 BankAccount::BankAccount(double b, std::string o, std::string c)
@@ -13,16 +13,13 @@ BankAccount::BankAccount(double b, std::string o, std::string c)
 	//balance = b;
 	SetBalance(b);
 	owner = o;
-	curency = c;
+	currency = c;
 }
-
-
-
 
 void BankAccount::SetBalance(double b)
 {
 	if (b >= 0
-			&& isSetBalanceExecute == false) //aby mozna bylo tylko raz wywolac metode
+		&& isSetBalanceExecute == false) //aby mozna by³o tylko raz wykonaæ kod
 	{
 		balance = b;
 
@@ -32,12 +29,9 @@ void BankAccount::SetBalance(double b)
 
 double BankAccount::GetBalance()
 {
-	//instrukcja zabezpieczajaca
+	//instrukcje zabezpieczaj¹ce
 	return balance;
 }
-
-
-
 
 void BankAccount::AccountInformation()
 {
@@ -45,28 +39,28 @@ void BankAccount::AccountInformation()
 	std::cout << "W³aœciciel: " << owner << "\n";
 	std::cout << "Saldo: " << balance << " " << currency << "\n";
 }
-void BankAccount :: DepositToAccount(double amount)
+
+void BankAccount::DepositToAccount(double amount)
 {
 	if (amount >= 0)
 		balance = balance + amount;
-
 }
 
-void BankAccount::WidthdrawalFromAccount(double amount)
+bool BankAccount::WidthdrawalFromAccount(double amount)
 {
 	if (amount >= 0
+		&& balance >= amount)
+	{
+		balance = balance - amount;
+		return true;
+	}
 
-	&& balance >= amount)
-	balance = balance - amount;
-	return true;
-
+	return false;
 }
-return false;
 
-
-void TransferBetwenAccounts(BankAccount& targetAccount, double amount)
+void BankAccount::TransferBetweenAccounts(BankAccount& targetAcccount, double amount)
 {
 	if (WidthdrawalFromAccount(amount))
-		targetAccount.DepositToAccount(amount);
+		targetAcccount.DepositToAccount(amount);
 
 }

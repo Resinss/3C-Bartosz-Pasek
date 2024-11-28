@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\FirstObjectConsoleApplication\BankAccount.cpp" />
     <ClCompile Include="InheritanceConsoleApplication.cpp" />
   </ItemGroup>
   <ItemGroup>

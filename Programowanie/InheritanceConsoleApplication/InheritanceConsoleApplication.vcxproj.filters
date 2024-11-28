@@ -18,6 +18,9 @@
     <ClCompile Include="InheritanceConsoleApplication.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\FirstObjectConsoleApplication\BankAccount.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\FirstObjectConsoleApplication\BankAccount.h">

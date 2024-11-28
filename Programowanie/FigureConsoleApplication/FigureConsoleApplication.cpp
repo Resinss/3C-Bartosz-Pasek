@@ -1,66 +1,98 @@
 #include <iostream>
+using namespace std;
 
 class Figura {
 public:
-	virtual void obliczPole() = 0;
+	virtual double area() = 0;
 };
 
 class Trapez : public Figura {
 public:
-	double a, b, h;
-	Trapez(double baseA, double baseB, double height) : a(baseA), b(baseB), h(height) {}
-    double obliczPole() {
-		return ((a + b) * h) / 2;
+	double base1, base2, height;
+	Trapez(double b1, double b2, double h) : base1(b1), base2(b2), height(h) {}
+    double area() override {
+		return ((base1 + base2) * height) / 2;
 		
-	}
-};
-
-class Rownoleglobok : public Figura {
-public:
-	Rownoleglobok(double baseA, double height) : a(baseA), h(height) {}
-	void obliczPole() override {
-		std::cout << "Pole rownolegloboku: " << a * h << std::endl;
 	}
 };
 
 class Romb : public Figura {
 public:
-	Romb(double sideA, double height) : a(sideA), h(height) {}
-	void obliczPole() override {
-		std::cout << "Pole rombu: " << a * h << std::endl;
+	double side, height;
+	Romb(double s, double h) : side(s), height(h) {}
+	
+	double area() override {
+		return side * height;
 	}
 };
 
-class Prostokat : public Prostokat {
+class Rownoleglobok : public Figura {
 public:
-	Prostokat (double sideA,double bokB) : a(sideA), b(bokB) {}
-	void obliczPole() {
-		return a * b;
+	double base, height;
+	Rownoleglobok(double b, double h) : base(b), height(h) {}
+
+	double area() override {
+		return base * height;
 	}
 };
 
-class Kwadrat {
+class Prostokat : public Figura {
 public:
-	double a;
-	Kwadrat(double sideA) : a(sideA)  {}
-	double obliczPole()  {
-		return a * a;
+	double lenght, width;
+	Prostokat(double l, double w) : lenght(l), width(w) {}
+
+	double area() override {
+		return lenght * width;
+	}
+};
+
+class Kwadrat : public Figura {
+public:
+	double side;
+	Kwadrat(double s) : side(s)  {}
+
+	double area() override {
+		return side * side;
 	}
 };
 
 
 int main() {
-	Trapez trapez(3, 5, 4);
-	std::cout << "Pole trapezu: " << trapez.obliczPole() << std::endl;
+	setlocale(LC_CTYPE, "polish");
+	double side;
+	cout << "Podaj bok kwadratu: ";
+	cin >> side;
 
-	Romb romb(5, 4);
-	std::cout << "Pole rombu: " << romb.obliczPole() << std::endl;
+	Kwadrat kwadrat(side);
+	cout << "Pole kwadratu: " << kwadrat.area() << endl;
 
-	Prostokat prostokat(4, 6);
-	std::cout << "Pole prostokata: " << prostokat.obliczPole() << std::endl;
+	double base1, base2, height;	
+	cout << "Podaj podstawe1, podstawe2 i wysokoœæ trapezu";
+	cin >> base1 >> base2 >> height;
 
-	Kwadrat kwadrat(4);
-	std::cout << "Pole kwadratu: " << kwadrat.obliczPole() << std::endl;
+	Trapez trapez(base1, base2, height);
+	cout << "Pole trapezu: " << trapez.area() << endl;
+
+	double rombSide, rombHeight;	
+	cout << "Podaj bok i wysokoœærombu";
+	cin >> rombSide >> rombHeight;
+
+	Romb romb(rombSide, rombHeight);
+	cout << "Polerombu: " << romb.area() << endl;
+
+	double lenght, width;
+	cout << "Podaj d³ugosc i szerokosc prostok¹ta: ";
+	cin >> lenght >> width;
+
+	Prostokat prostokat(lenght, width);
+	cout << "Pole prostokata: " << prostokat.area() << endl;
+
+	double rownoleglobokBase, rownoleglobokHeight;
+	cout << "Podaj podstawe i wysokosc rownolegloboku: ";
+	cin >> rownoleglobokBase >> rownoleglobokHeight;
+
+	Rownoleglobok rownoleglobok(rownoleglobokBase, rownoleglobokHeight);
+	cout << "Pole rownolegloboku: " << rownoleglobok.area() << endl;
 
 	return 0;
 }

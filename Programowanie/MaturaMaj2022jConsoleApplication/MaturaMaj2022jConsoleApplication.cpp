@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <set>
 
 int main()
 {
@@ -60,4 +61,34 @@ int main()
 			}
 	}
 
+}
+
+using namespace std;
+vector<int> primeFactors(int n) {
+	vector<int> factors;
+	for (int i = 2; i * i <= n; i++) {
+		while (n % i == 0) {
+			factors.push_back(i);
+			n /= i;
+		}
+	}
+	if (n > 1) {
+		factors.push_back(n);
+	}
+	return factors;
+}
+int main() {
+	ifstream file("liczby.txt");
+	if (!file) {
+		cerr << "Nie mo¿na otworzyc pliku liczby.txt" << endl;
+		return 1;
+	}
+
+	int number;
+	int maxTotalFactors = 0, maxDistinctFactors(number);
+	int numberWithMaxFactors = 0, numberWithMaxDistinct = 0;
+
+	while (file >> number) {
+
+	}
 }

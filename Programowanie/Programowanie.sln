@@ -73,6 +73,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MaturaCzerwiec2022ConsoleAp
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "czerwiecMaturaSamConsoleApplication", "czerwiecMaturaSamConsoleApplication\czerwiecMaturaSamConsoleApplication.vcxproj", "{C67A51A7-D117-4FCE-A7C7-A661C3B8B99E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MaturaMaj2024SamConsoleApplication", "MaturaMaj2024SamConsoleApplication\MaturaMaj2024SamConsoleApplication.vcxproj", "{0387D09A-B05F-46EA-8F47-A38843EA8F26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -273,6 +275,14 @@ Global
 		{C67A51A7-D117-4FCE-A7C7-A661C3B8B99E}.Release|x64.Build.0 = Release|x64
 		{C67A51A7-D117-4FCE-A7C7-A661C3B8B99E}.Release|x86.ActiveCfg = Release|Win32
 		{C67A51A7-D117-4FCE-A7C7-A661C3B8B99E}.Release|x86.Build.0 = Release|Win32
+		{0387D09A-B05F-46EA-8F47-A38843EA8F26}.Debug|x64.ActiveCfg = Debug|x64
+		{0387D09A-B05F-46EA-8F47-A38843EA8F26}.Debug|x64.Build.0 = Debug|x64
+		{0387D09A-B05F-46EA-8F47-A38843EA8F26}.Debug|x86.ActiveCfg = Debug|Win32
+		{0387D09A-B05F-46EA-8F47-A38843EA8F26}.Debug|x86.Build.0 = Debug|Win32
+		{0387D09A-B05F-46EA-8F47-A38843EA8F26}.Release|x64.ActiveCfg = Release|x64
+		{0387D09A-B05F-46EA-8F47-A38843EA8F26}.Release|x64.Build.0 = Release|x64
+		{0387D09A-B05F-46EA-8F47-A38843EA8F26}.Release|x86.ActiveCfg = Release|Win32
+		{0387D09A-B05F-46EA-8F47-A38843EA8F26}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -310,6 +320,7 @@ Global
 		{D8939C4D-7CFF-48B3-B149-704E9FB05F16} = {1ED810FB-24E1-4C47-A66A-35A48748F489}
 		{4D8C9EBE-1695-423E-8793-1C808CB7816E} = {1ED810FB-24E1-4C47-A66A-35A48748F489}
 		{C67A51A7-D117-4FCE-A7C7-A661C3B8B99E} = {1ED810FB-24E1-4C47-A66A-35A48748F489}
+		{0387D09A-B05F-46EA-8F47-A38843EA8F26} = {1ED810FB-24E1-4C47-A66A-35A48748F489}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F99647CA-2D29-4AD6-80F2-496D1DE8191B}

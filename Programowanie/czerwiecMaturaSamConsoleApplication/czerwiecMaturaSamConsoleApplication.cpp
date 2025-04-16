@@ -44,7 +44,7 @@ void zadanie4_2()
         }
     }
 
-    std::cout << "Liczba: " << maxNumber << " ma najwiêksz¹ ró¿nicê wzglêdem odbicia: " << maxReversed << "\n";
+    std::cout << "Liczba: " << maxNumber << " ma najwiêkzsz¹ ró¿nicê wzglêdem odbicia: " << maxReversed << "\n";
 }
 
 

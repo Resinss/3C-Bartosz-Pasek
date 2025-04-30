@@ -5,7 +5,7 @@
 
 using namespace std;
 
-//3_1
+//3_1.
 int skrNumber(int liczba) {
     int potega = 1;
     int wynik = 0;

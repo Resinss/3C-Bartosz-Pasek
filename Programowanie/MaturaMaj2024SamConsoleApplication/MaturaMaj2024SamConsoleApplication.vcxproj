@@ -129,6 +129,12 @@
   <ItemGroup>
     <ClCompile Include="MaturaMaj2024SamConsoleApplication.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="skrot.txt" />
+    <CopyFileToFolders Include="skrot2.txt" />
+    <CopyFileToFolders Include="skrot2_przyklad.txt" />
+    <CopyFileToFolders Include="skrot_przyklad.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

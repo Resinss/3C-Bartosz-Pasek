@@ -1,46 +1,68 @@
-﻿Console.Write("Hello, World! \n");
+﻿using System.Runtime.InteropServices;
+
+Console.Write("Hello, World! \n");
 Console.WriteLine("Hello, World!");
 
 string name = "Jan";
-string surname = "Kowalski";
-Console.WriteLine("witaj " + name + " " + surname + " " + "tutaj!!!");
-Console.WriteLine("Witaj {0} {1} tutaj!!!", name, surname);
-Console.WriteLine($"Witaj {name} {surname} tutaj!!!");
+string lastname = "Kowalski";
+Console.WriteLine("Witaj " + name + " " + lastname + " " + "tutaj!!!");
+Console.Write("Witaj {0} {1} tutaj!!!", name, lastname);
 
-Console.WriteLine("Predkość to km\\h");
-Console.WriteLine(@"Predkość to km\\h");
+Console.WriteLine($"Witaj {name} {lastname} tutaj!!!");
+Console.WriteLine("predkosc to km//h");
+Console.WriteLine(@"predkosc to km/h");
 
 int firstNumber = 5;
 int secondNumber = firstNumber;
 secondNumber++;
-Console.WriteLine($"Pierwsza liczba to {firstNumber}");
-Console.WriteLine($"Druga liczba to {secondNumber}");
+Console.WriteLine($"Pierwsza liczba: {firstNumber}");
+Console.WriteLine($"Pierwsza liczba: {secondNumber}");
 
-//przekazywane przez zawartość
-void Parametrtest_v1(int p)
+//----------------------------------------------------
+
+//przekazywanie wartości
+void ParametrTest_v1(int p)
 {
-    Console.WriteLine($"Parametr w ParametrTest_v1 {p}");
+    Console.WriteLine($"Parametr: {p}");
     p++;
-    Console.WriteLine($"Parametr w ParametrTest_v1 {p}");
+    Console.WriteLine($"Parametr: {p}");
 }
 
-//przekazywanie przez referencje
-void Parametrtest_v2(ref int p)
+firstNumber = 15;
+Console.WriteLine($"przed {firstNumber}");
+ParametrTest_v1(firstNumber);
+Console.WriteLine($"po {firstNumber}");
+//Parametr_v1(99);
+
+//przekazywanie przez referencje 
+
+void ParametrTest_v2(ref int p)
 {
-    Console.WriteLine($"Parametr w ParametrTest_v2 {p}");
+    Console.WriteLine($"Parametr: {p}");
     p++;
-    Console.WriteLine($"Parametr w ParametrTest_v2 {p}");
+    Console.WriteLine($"Parametr: {p}");
 }
 
-
 firstNumber = 15;
-Console.WriteLine($"firstNumber przed {firstNumber}");
-Parametrtest_v1(firstNumber);
-Console.WriteLine($"firstNumber po {firstNumber}");
-//ParametrTest_v1(99);
+Console.WriteLine($"przed {firstNumber}");
+ParametrTest_v2(ref firstNumber);
+Console.WriteLine($"po {firstNumber}");
+//ParametrTest_v2(ref 99) //BLAD
 
-firstNumber = 15;
-Console.WriteLine($"firstNumber przed {firstNumber}");
-Parametrtest_v2(ref firstNumber);
-Console.WriteLine($"firstNumber po {firstNumber}");
-//ParametrTest_v2(99); //BŁĄD
+void ParametrTest_v3(out int p)
+{
+    //Console.WriteLine($"Parametr: {p}");
+    p = 19;
+    Console.WriteLine($"Parametr: {p}");
+}
+
+int thirdNumber = 12;
+ParametrTest_v3(out thirdNumber);
+Console.WriteLine($"thirdNumber to {thirdNumber}");
+
+string firstStrNumber = "15";
+int firstConvertedNumber = int.Parse(firstStrNumber);
+Console.WriteLine($"po konwersji {firstConvertedNumber}");
+
+if (int.TryParse(firstStrNumber, out int secondConvertNumber)) ;
+Console.WriteLine($"Udało sie skonwertować {secondConvertNumber}");

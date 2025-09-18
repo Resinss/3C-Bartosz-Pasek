@@ -59,3 +59,4 @@ void ParametrTestClass_v2(PointClass pc)
 
 ParametrTestClass_v2(firstPointClass);
 Console.WriteLine($"firstPointClass ({firstPointClass.x} , {firstPointClass.y})");
+//2

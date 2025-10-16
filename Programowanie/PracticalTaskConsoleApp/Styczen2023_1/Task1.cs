@@ -29,3 +29,4 @@ namespace PracticalTaskConsoleApp.Styczen2023_1
         }
     }
 }
+

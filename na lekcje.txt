@@ -1,0 +1,68 @@
+
+using System;
+namespace PracticalAskConsoleApp.Styczeń_2023_1
+{
+    internal class task1
+    {
+        public void task()
+        {
+            int number_a = 0, number_b = 0;
+            bool poprawneDane = false;
+
+            while (!poprawneDane)
+            {
+                try
+                {
+                    Console.Write("Podaj liczbę a: ");
+                    number_a = int.Parse(Console.ReadLine());
+
+                    Console.Write("Podaj liczbę b: ");
+                    number_b = int.Parse(Console.ReadLine());
+
+                    if (number_a > 0 && number_b > 0)
+                    {
+                        poprawneDane = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Obie liczby muszą być większe od zera!\n");
+                    }
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Błąd: podaj poprawne liczby całkowite!\n");
+                }
+                catch (OverflowException)
+                {
+                    Console.WriteLine("Błąd: podane liczby są zbyt duże!\n");
+                }
+            }
+
+            int wynik = NWD(number_a, number_b);
+            Console.WriteLine($"\nNajwiększy wspólny dzielnik to: {wynik}");
+        }
+
+        /*
+         ***********************************
+          Nazwa funkcji:       NWD
+          
+          Opis funkcji:        Oblicza największy wspólny dzielnik dwóch liczb.
+                               
+          Parametry:           a - pierwsza liczba
+                               b - druga liczba
+                               
+          Zwracany typ i opis: int - największy wspólny dzielnik (NWD)
+         ***********************************
+         */
+        int NWD(int a, int b)
+        {
+            while (b != 0)
+            {
+                int temp = b;
+                b = a % b;
+                a = temp;
+            }
+            return a;
+        }
+    }
+}

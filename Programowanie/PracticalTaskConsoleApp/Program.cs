@@ -1,4 +1,7 @@
-﻿using PracticalTaskConsoleApp.Styczen2023_1;
+﻿using PracticalAskConsoleApp.Styczeń_2023_1;
 
-Task1 task1 = new Task1();
-task1.NWD();
+//Styczeń 2023_1
+
+
+task1 task1 = new task1();
+task1.task();

@@ -1,0 +1,48 @@
+
+using System;
+
+namespace ParticalTasksConsoleApp.Styczen2023_1
+{
+    internal class task1
+    {
+        public void task()
+        {
+            Console.Write("Wprowadź pierwsza liczsbe: ");
+            if (!int.TryParse(Console.ReadLine(), out int liczba1) || liczba1 <= 0)
+            {
+                Console.WriteLine("Pierwsza liczba musi być dodatnia.");
+                return;
+            }
+
+            Console.Write("Wprowadź druga  liczbe: ");
+            if (!int.TryParse(Console.ReadLine(), out int liczba2) || liczba2 <= 0)
+            {
+                Console.WriteLine("Druga liczba musi być dodatnia.");
+                return;
+            }
+
+            int wynik = ObliczNWD(liczba1, liczba2);
+            Console.WriteLine($"Największy wspólny dzielnik to: {wynik}");
+        }
+
+        private int ObliczNWD(int x, int y)
+        {
+            while (true)
+            {
+                if (x == y)
+                    break;
+
+                if (x > y)
+                    x -= y;
+                else
+                    y -= x;
+            }
+            return x;
+        }
+    }
+}
+
+task1 task1 = new task1();
+task1.task();
+
+

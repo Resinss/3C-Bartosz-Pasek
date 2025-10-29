@@ -1,34 +1,45 @@
-﻿namespace PractitalTasks.Styczeń_2023_1;
+﻿
+using System;
 
-internal class Task1
+namespace PracticalAskConsoleApp.Styczeń_2023_1
 {
-
-    static void NWD(int a, int b)
+    internal class task1
     {
-        while (a != b)
+        public void task()
         {
-            if (a > b)
+            Console.Write("Wprowadź pierwsza liczsbe: ");
+            if (!int.TryParse(Console.ReadLine(), out int liczba1) || liczba1 <= 0)
             {
-                a -= b;
+                Console.WriteLine("Pierwsza liczba musi być dodatnia.");
+                return;
             }
-            else
-                b -= a;
-        }
-        Console.WriteLine("NWD = " + a);
-    }
 
-    static void Task()
-    {
-        Console.WriteLine("Podaj pierwszą liczbe");
-        int a = int.Parse(Console.ReadLine());
-        if (a < 0)
-            a = a * (-1);
-        Console.WriteLine("Podaj drugą liczbe");
-        int b = int.Parse(Console.ReadLine());
-        if (b < 0)
-            b = b * (-1);
-        NWD(a, b);
+            Console.Write("Wprowadź druga  liczbe: ");
+            if (!int.TryParse(Console.ReadLine(), out int liczba2) || liczba2 <= 0)
+            {
+                Console.WriteLine("Druga liczba musi być dodatnia.");
+                return;
+            }
+
+            int wynik = ObliczNWD(liczba1, liczba2);
+            Console.WriteLine($"Największy wspólny dzielnik to: {wynik}");
+        }
+
+        private int ObliczNWD(int x, int y)
+        {
+            while (true)
+            {
+                if (x == y)
+                    break;
+
+                if (x > y)
+                    x -= y;
+                else
+                    y -= x;
+            }
+            return x;
+        }
     }
 }
 
-     
+

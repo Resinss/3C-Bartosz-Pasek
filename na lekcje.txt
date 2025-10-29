@@ -1,80 +1,48 @@
 
 using System;
-namespace PracticalAskConsoleApp.Styczeń_2023_1
+
+namespace ParticalTasksConsoleApp.Styczen2023_1
 {
     internal class task1
     {
         public void task()
         {
-            int number_a = 0, number_b = 0;
-            bool poprawneDane = false;
-
-            while (!poprawneDane)
+            Console.Write("Wprowadź pierwsza liczsbe: ");
+            if (!int.TryParse(Console.ReadLine(), out int liczba1) || liczba1 <= 0)
             {
-                try
-                {
-                    Console.Write("Podaj liczbę a: ");
-                    number_a = int.Parse(Console.ReadLine());
-
-                    Console.Write("Podaj liczbę b: ");
-                    number_b = int.Parse(Console.ReadLine());
-
-                    if (number_a > 0 && number_b > 0)
-                    {
-                        poprawneDane = true;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Obie liczby muszą być większe od zera!\n");
-                    }
-                }
-                catch (FormatException)
-                {
-                    Console.WriteLine("Błąd: podaj poprawne liczby całkowite!\n");
-                }
-                catch (OverflowException)
-                {
-                    Console.WriteLine("Błąd: podane liczby są zbyt duże!\n");
-                }
+                Console.WriteLine("Pierwsza liczba musi być dodatnia.");
+                return;
             }
 
-            int wynik = NWD(number_a, number_b);
-            Console.WriteLine($"\nNajwiększy wspólny dzielnik to: {wynik}");
+            Console.Write("Wprowadź druga  liczbe: ");
+            if (!int.TryParse(Console.ReadLine(), out int liczba2) || liczba2 <= 0)
+            {
+                Console.WriteLine("Druga liczba musi być dodatnia.");
+                return;
+            }
+
+            int wynik = ObliczNWD(liczba1, liczba2);
+            Console.WriteLine($"Największy wspólny dzielnik to: {wynik}");
         }
 
-        /*
-         ***********************************
-          Nazwa funkcji:       NWD
-          
-          Opis funkcji:        Oblicza największy wspólny dzielnik dwóch liczb.
-                               
-          Parametry:           a - pierwsza liczba
-                               b - druga liczba
-                               
-          Zwracany typ i opis: int - największy wspólny dzielnik (NWD)
-         ***********************************
-         */
-        int NWD(int a, int b)
+        private int ObliczNWD(int x, int y)
         {
-            while (b != 0)
+            while (true)
             {
-                int temp = b;
-                b = a % b;
-                a = temp;
+                if (x == y)
+                    break;
+
+                if (x > y)
+                    x -= y;
+                else
+                    y -= x;
             }
-            return a;
+            return x;
         }
     }
 }
 
-
-
-
-using PracticalAskConsoleApp.Styczeń_2023_1;
-using PracticalTaskConsoleApp.Czerwiec2022;
-
-//Styczeń 2023_1
-
-
 task1 task1 = new task1();
 task1.task();
+
+

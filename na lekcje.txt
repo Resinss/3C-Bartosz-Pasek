@@ -1,48 +1,56 @@
-
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ParticalTasksConsoleApp.Styczen2023_1
+namespace PracticalTaskConsoleApp.czerwiec_2022
 {
-    internal class task1
+    public class Person
     {
-        public void task()
+        private static int _count = 0;
+        private int id;
+        private string firstName;
+        public int number_of_instance;
+
+        public Person()
         {
-            Console.Write("Wprowadź pierwsza liczsbe: ");
-            if (!int.TryParse(Console.ReadLine(), out int liczba1) || liczba1 <= 0)
-            {
-                Console.WriteLine("Pierwsza liczba musi być dodatnia.");
-                return;
-            }
-
-            Console.Write("Wprowadź druga  liczbe: ");
-            if (!int.TryParse(Console.ReadLine(), out int liczba2) || liczba2 <= 0)
-            {
-                Console.WriteLine("Druga liczba musi być dodatnia.");
-                return;
-            }
-
-            int wynik = ObliczNWD(liczba1, liczba2);
-            Console.WriteLine($"Największy wspólny dzielnik to: {wynik}");
+            id = 0;
+            firstName = string.Empty;
+            _count++;
+            number_of_instance = _count;
         }
 
-        private int ObliczNWD(int x, int y)
+        public Person(int id, string firstName)
         {
-            while (true)
-            {
-                if (x == y)
-                    break;
+            this.id = id;
+            this.firstName = firstName;
+            _count++;
+            number_of_instance = _count;
+        }
 
-                if (x > y)
-                    x -= y;
-                else
-                    y -= x;
-            }
-            return x;
+        public Person(Person other)
+        {
+            id = other.id;
+            firstName = other.firstName;
+            _count++;
+            number_of_instance = _count;
+        }
+
+        public void WriteName(string who)
+        {
+            string displayName = string.IsNullOrWhiteSpace(firstName) ? "Brak danych" : firstName;
+            Console.WriteLine($"Cześć {who}, mam na imię {displayName}");
         }
     }
 }
 
-task1 task1 = new task1();
-task1.task();
 
 
+//czerwiec2022
+
+Person person = new Person(5, "Ktoś");
+person.WriteName("Marek");
+
+Person person2 = new Person(6, "Cos");
+person2.WriteName("Ktoś");

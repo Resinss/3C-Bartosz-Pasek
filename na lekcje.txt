@@ -1,0 +1,185 @@
+
+task4.cs
+
+using System;
+
+namespace PracticalTaskConsoleApp.styczen2025_01
+{
+    class Pralka
+    {
+        private int numerProgramu = 0;
+
+        public int UstawProgram(int numer)
+        {
+            if (numer >= 1 && numer <= 12)
+            {
+                numerProgramu = numer;
+                Console.WriteLine("Ustawiono program prania nr " + numerProgramu);
+            }
+            else
+            {
+                numerProgramu = 0;
+                Console.WriteLine("Błędny numer programu!");
+            }
+            return numerProgramu;
+        }
+    }
+
+    class Odkurzacz
+    {
+        private bool stan = false;
+
+        public void On()
+        {
+            if (!stan)
+            {
+                stan = true;
+                Console.WriteLine("Odkurzacz włączono");
+            }
+        }
+
+        public void Off()
+        {
+            if (stan)
+            {
+                stan = false;
+                Console.WriteLine("Odkurzacz wyłączono");
+            }
+        }
+
+        public void RozladowalSie()
+        {
+            Console.WriteLine("Odkurzacz wyładował się");
+        }
+    }
+
+    class Task4
+    {
+        public void Uruchom()
+        {
+            Pralka pralka = new Pralka();
+            Odkurzacz odkurzacz = new Odkurzacz();
+
+            Console.Write("Podaj numer programu prania (1-12): ");
+            int numer;
+            if (int.TryParse(Console.ReadLine(), out numer))
+            {
+                pralka.UstawProgram(numer);
+            }
+
+            odkurzacz.On();
+            odkurzacz.On();
+            odkurzacz.On();
+
+            odkurzacz.RozladowalSie();
+
+            odkurzacz.Off();
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+using PracticalTaskConsoleApp.Styczen2023_1;
+using PracticalTaskConsoleApp.czerwiec2023_6;
+using PracticalTaskConsoleApp.czerwiec_2022;
+using PracticalTaskConsoleApp.styczen2025_01;
+
+//Styczeń 2023_1
+
+/*
+task1 task1 = new task1();
+task1.task();
+*/
+
+//czerwiec2022
+
+/*
+Person person = new Person(5, "Ktoś");
+person.WriteName("Marek");
+
+Person person2 = new Person(6, "Cos");
+person2.WriteName("Ktoś");
+
+*/
+
+//styczen2025_01
+
+/*
+Task4 zadanie = new Task4();
+zadanie.Uruchom();
+*/
+
+
+//czerwiec 2023_6
+
+/*
+
+MovieApp app = new MovieApp();
+app.Run();
+*/
+
+
+==========================================================================================
+
+task2.cs czerwiec2023_06
+==========================================================================================
+
+
+
+using System;
+
+namespace  PracticalTaskConsoleApp.czerwiec2023_6
+{
+    internal class Movie
+    {
+        private string name;
+        private int number;
+
+        public Movie(string name, int initialNumber)
+        {
+            this.name = name;
+            this.number = initialNumber;
+        }
+
+        public void ShowInfo()
+        {
+            Console.WriteLine($"Tytuł: {name}");
+            Console.WriteLine($"Liczba wypożyczeń: {number}");
+        }
+
+        public void SetNumber(int newNumber)
+        {
+            number = newNumber;
+        }
+
+        public void Add(int amount)
+        {
+            number += amount;
+            Console.WriteLine($"Liczba wypożyczeń teraz: {number}");
+        }
+    }
+
+    internal class MovieApp
+    {
+        public void Run()
+        {
+            Movie movie1 = new Movie("Szybcy i wściekli", 2);
+            movie1.ShowInfo();
+            movie1.Add(6);
+            Console.WriteLine();
+
+            Movie movie2 = new Movie("Świat", 3);
+            movie2.ShowInfo();
+            movie2.Add(3);
+        }
+    }
+}
+
+

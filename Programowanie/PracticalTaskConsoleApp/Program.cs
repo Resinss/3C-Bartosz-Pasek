@@ -2,6 +2,7 @@
 using PracticalTaskConsoleApp.czerwiec2023_6;
 using PracticalTaskConsoleApp.czerwiec_2022;
 using PracticalTaskConsoleApp.styczen2025_01;
+using PracticalTaskConsoleApp.Styczen2023_01_2;
 
 //Styczeń 2023_1
 
@@ -37,3 +38,7 @@ person2.WriteName("Ktoś");
 Task4 zadanie = new Task4();
 zadanie.Uruchom();
 */
+
+
+Note notatka1 = new Note("zakupy", "jabłka woda mąka ryż");
+notatka1.View();
